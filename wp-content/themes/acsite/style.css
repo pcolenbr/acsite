@@ -1,0 +1,39 @@
+/*
+Theme Name: Avenue Code Theme.
+Theme URI: www.avenuecode.com
+Description: Avenue Code Official Website Stylesheet.
+Version: 1.0
+Author: Pedro Colen
+Author URI: http://www.avenuecode.com
+*/
+
+@font-face {
+	font-family: GillSans
+	src: url("fonts/GillSans.ttc");
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://themes.googleusercontent.com/static/fonts/ptsans/v6/GdZvpAq9shJukTEvSQbePw.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://themes.googleusercontent.com/static/fonts/ptsans/v6/hpORcvLZtemlH8gI-1S-7hsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+body {
+	line-height: 1.618em;
+	font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #000;
+	position: relative;
+	background-color: #FAFAFA;
+	height: 100%;
+	word-wrap: break-word; 
+}
+
