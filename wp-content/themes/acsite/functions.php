@@ -2,6 +2,8 @@
 
 require_once 'utilities/informations_menu.php';
 
+add_theme_support( 'post-thumbnails' ); 
+
 // Resgister styles and scripts using WP function to improve cache
 function ac_load_utilities() {
 	ac_styles();

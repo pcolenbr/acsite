@@ -1,0 +1,36 @@
+#services-menu {
+  text-align: center; }
+
+.service-title .border-title {
+  margin-bottom: 20px; }
+.service-title .div-title {
+  text-align: center; }
+  .service-title .div-title h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0px; }
+  .service-title .div-title h2 {
+    font-size: 20px;
+    margin: 0px; }
+
+.service-onpage-menu ul {
+  margin: 50px 0px;
+  display: table;
+  width: 100%;
+  padding: 0px 50px; }
+  .service-onpage-menu ul li {
+    display: table-cell; }
+    .service-onpage-menu ul li a {
+      color: #0b86a0; }
+      .service-onpage-menu ul li a:hover {
+        text-decoration: none;
+        color: #1A1A1A; }
+
+#wrap-management-consulting #management-consulting-text .row {
+  margin-bottom: 40px; }
+  #wrap-management-consulting #management-consulting-text .row:nth-child(odd) .image-div {
+    float: right; }
+#wrap-management-consulting #management-consulting-text h3 {
+  margin-top: 0px; }
+
+/*# sourceMappingURL=services.css.map */

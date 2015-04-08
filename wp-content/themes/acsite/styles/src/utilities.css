@@ -1,0 +1,98 @@
+.border-title {
+  border-top: 2px solid #000;
+  max-width: 300px;
+  margin-top: 50px;
+  margin-bottom: 55px; }
+
+.hexagon-services .hexagon-mask {
+  margin: 40px auto 0;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  cursor: pointer; }
+  .hexagon-services .hexagon-mask img {
+    height: 150px; }
+  .hexagon-services .hexagon-mask .mask {
+    background: transparent url(../../images/hexagon-mask-full.png) repeat center center;
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    -moz-transition: -moz-transform 300ms ease-out;
+    -o-transition: -o-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    position: absolute;
+    z-index: 4;
+    display: block;
+    width: 300px;
+    height: 300px;
+    left: -50%;
+    top: -50%;
+    pointer-events: none;
+    zoom: 1; }
+  .hexagon-services .hexagon-mask:hover .mask {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg); }
+.hexagon-services .num {
+  font-size: 1.1em;
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 33px;
+  height: 33px;
+  padding: 5px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  position: absolute;
+  right: 21px;
+  bottom: 3px;
+  z-index: 99999; }
+.hexagon-services .num-blue, .hexagon-services .btn-blue, .hexagon-services .btn-blue:hover, .hexagon-services .btn-blue:after {
+  background-color: #15639E; }
+.hexagon-services .num-orange, .hexagon-services .btn-carrot, .hexagon-services .btn-carrot:hover, .hexagon-services .btn-carrot:after {
+  background-color: #E05E15; }
+.hexagon-services .num-grey, .hexagon-services .btn-grey, .hexagon-services .btn-grey:hover, .hexagon-services .btn-grey:after {
+  background-color: #3C414C; }
+.hexagon-services .num-red, .hexagon-services .btn-red, .hexagon-services .btn-red:hover, .hexagon-services .btn-red:after {
+  background-color: #8F1612; }
+.hexagon-services h3 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #3C424D; }
+.hexagon-services p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #3C424D; }
+.hexagon-services .btn {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  font-weight: bold;
+  font-family: "PT Sans Caption", sans-serif;
+  position: relative;
+  color: #FFF;
+  line-height: 1.618em; }
+  .hexagon-services .btn:hover {
+    color: #FFF;
+    text-decoration: none;
+    opacity: 0.6; }
+  .hexagon-services .btn:after {
+    display: block;
+    content: "";
+    top: 0px;
+    right: -7px;
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    border: 1px solid transparent; }
+
+/*# sourceMappingURL=utilities.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIC,0CAAe;EACd,UAAU,EAAE,MAAM",
+"sources": ["../../sass/management-consulting.scss"],
+"names": [],
+"file": "management-consulting.css"
+}

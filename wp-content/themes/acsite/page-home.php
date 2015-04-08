@@ -50,7 +50,7 @@
 			<?php } ?>
 		</section>
 
-		<section class="container" id="services">
+		<section class="container" id="services-menu">
 			<?php if($currentlang=="en"):?>
 				<h1 class="title">SERVICES</h1>
 			<?php elseif($currentlang=="pt"):?>

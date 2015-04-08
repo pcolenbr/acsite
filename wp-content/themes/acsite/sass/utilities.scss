@@ -1,0 +1,111 @@
+@import 'variables';
+@import 'mixins';
+
+.border-title {
+	border-top: 2px solid #000;
+	max-width: 300px;
+	margin-top: 50px;
+	margin-bottom: 55px;
+}
+
+.hexagon-services {
+	.hexagon-mask {
+		margin: 40px auto 0;
+		position: relative;
+	  	width: 150px;
+	  	height: 150px;
+	 	overflow: hidden;
+	 	cursor: pointer;
+ 
+	 	img {
+	 		height: 150px;
+	 	}
+
+	 	.mask {
+			background: transparent url(../../images/hexagon-mask-full.png) repeat center center;
+			-webkit-transition: -webkit-transform 300ms ease-out;
+			-moz-transition: -moz-transform 300ms ease-out;
+			-o-transition: -o-transform 300ms ease-out;
+			transition: transform 300ms ease-out;
+			position: absolute;
+			z-index: 4;
+			display: block;
+			width: 300px;
+			height: 300px;
+			left: -50%;
+			top: -50%;
+			pointer-events: none;
+			zoom: 1;
+	 	}
+
+	 	&:hover .mask {
+			@include rotate(30deg);
+		}
+
+	}
+
+	.num {
+		font-size: 1.1em;
+		color: #FFFFFF;
+		font-weight: bold;
+		width: 33px;
+		height: 33px;
+		padding: 5px;
+		@include border-radius(20px);
+		position: absolute;
+		right: 21px;
+		bottom: 3px;
+		z-index: 99999;
+	}
+	//Number Colors
+	.num-blue, .btn-blue, .btn-blue:hover, .btn-blue:after {
+		background-color: #15639E;
+	}
+	.num-orange, .btn-carrot, .btn-carrot:hover, .btn-carrot:after {
+		background-color: #E05E15;
+	}
+	.num-grey, .btn-grey, .btn-grey:hover, .btn-grey:after {
+		background-color: #3C414C;
+	}
+	.num-red, .btn-red, .btn-red:hover, .btn-red:after {
+		background-color: #8F1612;
+	}
+
+	h3 {
+		font-size: 21px;
+		font-weight: bold;
+		color: $services_grey;
+	}
+
+	p {
+		font-size: 16px;
+		margin-bottom: 30px;
+		color: $services_grey;
+	}
+
+	.btn {
+		@include border-radius(0px);
+		font-weight: bold;
+		font-family: "PT Sans Caption", sans-serif;
+		position: relative;
+		color: #FFF;
+		line-height: 1.618em;
+		&:hover {
+			color: #FFF;
+			text-decoration: none;
+			opacity: 0.6;
+		}
+
+		&:after {
+			display: block;
+			content: "";
+		  	top: 0px;
+			right: -7px;
+			position: absolute;
+			height: 100%;
+			width: 4px;
+			border: 1px solid transparent;
+		}
+	}
+			
+}
