@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $currentlang = pll_current_language(); ?>
-<div id="wrap-management-consulting">
+<div id="wrap-engineering-and-agile-professionals">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 		<header>
@@ -57,7 +57,7 @@
 	        </div>
         <?php } ?>
 
-        <section class="container" id="management-consulting-text">
+        <section class="container" id="engineering-and-agile-professionals-text">
 	        <?php
 	        	foreach( $services_items as $management_consulting_item){
 	        	$div_id = strtolower(str_replace(' ', '-', $management_consulting_item["link-title"]));

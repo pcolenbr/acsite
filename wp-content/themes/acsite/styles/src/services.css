@@ -12,6 +12,8 @@
   .service-title .div-title h2 {
     font-size: 20px;
     margin: 0px; }
+.service-title .div-body {
+  margin-top: 30px; }
 
 .service-onpage-menu ul {
   margin: 50px 0px;
@@ -31,6 +33,20 @@
   #wrap-management-consulting #management-consulting-text .row:nth-child(odd) .image-div {
     float: right; }
 #wrap-management-consulting #management-consulting-text h3 {
+  margin-top: 0px; }
+
+#wrap-project-ownership-implementation #project-ownership-implementation-text .row {
+  margin-bottom: 40px; }
+  #wrap-project-ownership-implementation #project-ownership-implementation-text .row:nth-child(odd) .image-div {
+    float: right; }
+#wrap-project-ownership-implementation #project-ownership-implementation-text h3 {
+  margin-top: 0px; }
+
+#wrap-engineering-and-agile-professionals #engineering-and-agile-professionals-text .row {
+  margin-bottom: 40px; }
+  #wrap-engineering-and-agile-professionals #engineering-and-agile-professionals-text .row:nth-child(odd) .image-div {
+    float: right; }
+#wrap-engineering-and-agile-professionals #engineering-and-agile-professionals-text h3 {
   margin-top: 0px; }
 
 /*# sourceMappingURL=services.css.map */

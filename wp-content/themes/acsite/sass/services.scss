@@ -24,6 +24,10 @@
 			margin: 0px;
 		}
 	}
+
+	.div-body {
+		margin-top: 30px;
+	}
 }
 
 .service-onpage-menu {
@@ -47,6 +51,38 @@
 
 #wrap-management-consulting {
 	#management-consulting-text {
+		.row {
+			margin-bottom: 40px;
+			&:nth-child(odd) {
+				.image-div {
+					float: right;
+				}
+			}
+		}
+		h3 {
+			margin-top: 0px;	
+		}
+	}
+}
+
+#wrap-project-ownership-implementation {
+	#project-ownership-implementation-text {
+		.row {
+			margin-bottom: 40px;
+			&:nth-child(odd) {
+				.image-div {
+					float: right;
+				}
+			}
+		}
+		h3 {
+			margin-top: 0px;	
+		}
+	}
+}
+
+#wrap-engineering-and-agile-professionals {
+	#engineering-and-agile-professionals-text {
 		.row {
 			margin-bottom: 40px;
 			&:nth-child(odd) {
