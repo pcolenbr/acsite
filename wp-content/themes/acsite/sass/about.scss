@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'mixins';
+
+#wrap-about {
+	
+	h1 {
+		&.title {
+			color: #000000;
+			font-size: 45px;
+			font-weight: bold;
+			margin: 0px;
+		}
+	}
+
+	#what-we-do {
+		padding-top: 120px;
+		text-align: center;
+		margin-bottom: 70px;
+	}
+
+	#acmoto {
+		  background-color: #1a1a1a;
+		  text-align: center;
+		  color: #FFFFFF;
+
+		  h2 {
+		  	font-size: 24px;
+		  	font-weight: bold;
+		  }
+		  p {
+		  	  font-style: italic;
+		  }
+
+		#acmoto-carousel {
+			padding: 40px 0px;
+			h2 {
+				margin: 0px 0px 15px;
+			}
+			p {
+				margin: 0px;
+			}
+			.owl-controls {
+				.owl-pagination {
+					.owl-page {
+						span {
+							opacity: 1;
+							height: 22px;
+							width: 22px;
+							border: 2px solid;
+							border-color: white;
+							background: none;
+						}
+						&.active span {
+							background: $base_color;
+							border-color: $base_color;
+						}
+					}
+				}
+			}	
+		}
+	}
+
+	#leadership {
+		position: relative;
+		padding-top: 50px;
+
+		.leadership-container {
+			position: relative;
+		}
+	
+		h4 {
+			font-weight: bold;
+			font-size: 25px;
+			margin-bottom: 0px;
+		}
+
+		.about_box {
+			color: #FFFFFF;
+			opacity: 0.7;
+			background-color: #000000;
+			overflow: auto;
+			position: absolute;
+			top: 75px;
+			width: 30%;
+			padding: 5px 15px;
+		}
+
+		#about_zeo {
+			right: 0;
+		}
+
+		#amir_button {
+			color: #FFFFFF;
+		}
+
+		#zeo_button {
+			text-align: right;
+		}
+
+		#leadership_img {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			z-index: -999;
+		}
+
+	}
+
+	#team {
+		height: 300px;
+	}
+
+}

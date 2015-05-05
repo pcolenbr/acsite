@@ -84,7 +84,4 @@
               font-size: 23px;
               color: #FFF; }
       #wrap-home #clients #clients-partners-isotopes .clients-partners-item:hover .clients-partners-hover {
-        opacity: 1;
-        filter: alpha(opacity=100); }
-
-/*# sourceMappingURL=home.css.map */
+        opacity: 1; }

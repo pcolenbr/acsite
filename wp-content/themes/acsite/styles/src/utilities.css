@@ -63,11 +63,11 @@
 .hexagon-services h3 {
   font-size: 21px;
   font-weight: bold;
-  color: #3C424D; }
+  color: #3c424d; }
 .hexagon-services p {
   font-size: 16px;
   margin-bottom: 30px;
-  color: #3C424D; }
+  color: #3c424d; }
 .hexagon-services .btn {
   border-radius: 0px;
   -webkit-border-radius: 0px;
@@ -94,5 +94,3 @@
     height: 100%;
     width: 4px;
     border: 1px solid transparent; }
-
-/*# sourceMappingURL=utilities.css.map */

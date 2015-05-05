@@ -1,9 +1,13 @@
 @import 'variables';
 
-footer {
+footer { 
 	background: #1A1A1A;
   	color: #FFF;
 	padding: 20px 0;
+	height: 75px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 
 	.social-icons {
 		float: right;

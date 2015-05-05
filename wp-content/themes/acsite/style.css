@@ -25,15 +25,21 @@ Author URI: http://www.avenuecode.com
   src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://themes.googleusercontent.com/static/fonts/ptsans/v6/hpORcvLZtemlH8gI-1S-7hsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
 	line-height: 1.618em;
 	font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	font-size: 18px;
 	color: #000;
-	position: relative;
 	background-color: #FAFAFA;
 	height: 100%;
-	word-wrap: break-word; 
+	word-wrap: break-word;
+	/* This margin should be equals the footer height */
+	margin-bottom: 75px;
 }
 
