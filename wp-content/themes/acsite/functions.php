@@ -66,13 +66,64 @@ add_action ( 'login_enqueue_scripts', 'login' );
 
 // Register menus
 function register_my_menu() {
-  register_nav_menus(
-    array(
-      'header-menu-en' => __( 'Header Menu EN' ),
-      'header-menu-pt' => __( 'Header Menu PT' )
-    )
-  );
+	register_nav_menus(
+		array(
+			'header-menu-en' => __( 'Header Menu EN' ),
+			'header-menu-pt' => __( 'Header Menu PT' )
+			)
+		);
 }
 add_action( 'init', 'register_my_menu' );
+
+function create_team($bios) {
+	$numb_of_bios = 0;
+	for($i = 0; $i < count($bios); $i++) {
+		if(($numb_of_bios % 4) == 0) {
+			echo '<div class="row">';
+		}
+
+		echo '<div class="col-md-3 bio">';
+		echo '<div class="hexagon-profile">';
+		echo '<div class="hexagon-mask">';
+		echo '<span class="mask"></span>';
+		echo '<div class="hexagon-social">';
+
+		if( !empty( $bios[$i]['facebook-link'] ) ) 
+			echo '<a href="' .$bios[$i]['facebook-link']. '" class="fa fa-facebook animated" target="_blank"></a>';
+		if( !empty( $bios[$i]['twitter-link'] ) ) 
+			echo '<a href="' .$bios[$i]['twitter-link']. '" class="fa fa-twitter animated" target="_blank"></a>';
+		if( !empty( $bios[$i]['linkedin-link'] ) ) 
+			echo '<a href="' .$bios[$i]['linkedin-link']. '" class="fa fa-linkedin animated" target="_blank"></a>';
+
+		echo			'</div>';
+		echo			'<span class="mask-bg"></span>';						
+
+		$headshot_src = wp_get_attachment_image_src( $bios[$i]['picture'], 'full' );	
+		echo '<img src="' .$headshot_src[0]. '" alt="">';
+
+		echo '</div>';
+		echo '<div class="name">' .$bios[$i]['name']. '</div>';
+		echo '<div class="job">' .$bios[$i]['role']. '</div>';
+		echo '<p class="whoiam">' .$bios[$i]['bio']. '</p>';
+		echo '</div>';
+		echo '</div>';
+
+		if(($numb_of_bios % 4) == 3) {
+			echo '</div>';
+		}
+		$numb_of_bios++;
+
+		if($i == (count($bios) - 1)) {
+			echo '<div class="col-md-3 team_message">';
+			echo '<p class="number_of_members">+ 200<br><span class="message">passionate team members</span></p>';
+			echo '</div>';
+		}
+	}
+
+	if(($numb_of_bios % 4) != 0) {
+		echo '</div>';
+	}
+
+}
 
 ?>

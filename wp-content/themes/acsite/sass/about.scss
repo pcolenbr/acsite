@@ -61,11 +61,16 @@
 	}
 
 	#leadership {
-		position: relative;
-		padding-top: 50px;
 
-		.leadership-container {
+		#external-leadership-container {
+			position: absolute;
+			left: 50%;
+		}
+
+		#internal-leadership-container {
 			position: relative;
+			left: -50%;
+			top: 50px;
 		}
 	
 		h4 {
@@ -81,8 +86,12 @@
 			overflow: auto;
 			position: absolute;
 			top: 75px;
-			width: 30%;
+			width: 40%;
 			padding: 5px 15px;
+
+			p {
+				font-size: 16px;
+			}
 		}
 
 		#about_zeo {
@@ -99,15 +108,81 @@
 
 		#leadership_img {
 			width: 100%;
-			position: absolute;
-			top: 0;
 			z-index: -999;
 		}
 
 	}
 
 	#team {
-		height: 300px;
+		text-align: center;
+		padding-top: 50px;
+
+		.row {
+			display: table;
+		}
+		.col-md-3 {
+			display: table-cell;
+			float: none;
+		}
+
+		#team_brazil {
+			clear: both;
+			padding-top: 30px;
+		}
+		
+		.bio {
+			.hexagon-social {
+				position: absolute;
+				height: 150px;
+				width: 150px;
+				display: none;
+
+				a {
+					margin-top: 82px;
+					color: #FFFFFF;
+					position: relative;
+					z-index: 10;
+					padding: 5px;
+
+					&:hover {
+						color: #346DA6;
+						text-decoration: none;
+					}
+				}
+			}
+			.hexagon-mask  {
+				&:hover {
+					.hexagon-social {
+						display: block;
+					}
+				}
+			}
+			.name {
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.job {
+				font-style: italic;
+			}
+			.whoiam {
+				font-size: 15px;
+				color: #999999;
+				line-height: 20px;
+				padding: 0px 35px;
+			}
+		}
+
+		.team_message {
+			  display: table-cell;
+			  float: none;
+			  vertical-align: middle;
+			.number_of_members {
+				font-size: 80px;
+			}
+			.message {
+				font-size: 18px;
+			}
+		}
 	}
 
 }

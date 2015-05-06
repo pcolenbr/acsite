@@ -29,11 +29,11 @@ jQuery(document).ready(function($) {
         $('.about_box').css('max-height', img_h);
     });
 
-    $("#zeo_button").mouseenter(function(){
+    $("#amir_button").mouseenter(function(){
         $("#about_amir").show();
         $("#about_zeo").hide();
     });
-    $("#amir_button").mouseenter(function(){
+    $("#zeo_button").mouseenter(function(){
         $("#about_zeo").show();
         $("#about_amir").hide();
     });

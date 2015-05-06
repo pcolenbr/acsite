@@ -32,34 +32,79 @@
     #wrap-about #acmoto #acmoto-carousel .owl-controls .owl-pagination .owl-page.active span {
       background: #0b86a0;
       border-color: #0b86a0; }
-#wrap-about #leadership {
+#wrap-about #leadership #external-leadership-container {
+  position: absolute;
+  left: 50%; }
+#wrap-about #leadership #internal-leadership-container {
   position: relative;
-  padding-top: 50px; }
-  #wrap-about #leadership .leadership-container {
-    position: relative; }
-  #wrap-about #leadership h4 {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 0px; }
-  #wrap-about #leadership .about_box {
-    color: #FFFFFF;
-    opacity: 0.7;
-    background-color: #000000;
-    overflow: auto;
-    position: absolute;
-    top: 75px;
-    width: 30%;
-    padding: 5px 15px; }
-  #wrap-about #leadership #about_zeo {
-    right: 0; }
-  #wrap-about #leadership #amir_button {
-    color: #FFFFFF; }
-  #wrap-about #leadership #zeo_button {
-    text-align: right; }
-  #wrap-about #leadership #leadership_img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -999; }
+  left: -50%;
+  top: 50px; }
+#wrap-about #leadership h4 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 0px; }
+#wrap-about #leadership .about_box {
+  color: #FFFFFF;
+  opacity: 0.7;
+  background-color: #000000;
+  overflow: auto;
+  position: absolute;
+  top: 75px;
+  width: 40%;
+  padding: 5px 15px; }
+  #wrap-about #leadership .about_box p {
+    font-size: 16px; }
+#wrap-about #leadership #about_zeo {
+  right: 0; }
+#wrap-about #leadership #amir_button {
+  color: #FFFFFF; }
+#wrap-about #leadership #zeo_button {
+  text-align: right; }
+#wrap-about #leadership #leadership_img {
+  width: 100%;
+  z-index: -999; }
 #wrap-about #team {
-  height: 300px; }
+  text-align: center;
+  padding-top: 50px; }
+  #wrap-about #team .row {
+    display: table; }
+  #wrap-about #team .col-md-3 {
+    display: table-cell;
+    float: none; }
+  #wrap-about #team #team_brazil {
+    clear: both;
+    padding-top: 30px; }
+  #wrap-about #team .bio .hexagon-social {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    display: none; }
+    #wrap-about #team .bio .hexagon-social a {
+      margin-top: 82px;
+      color: #FFFFFF;
+      position: relative;
+      z-index: 10;
+      padding: 5px; }
+      #wrap-about #team .bio .hexagon-social a:hover {
+        color: #346DA6;
+        text-decoration: none; }
+  #wrap-about #team .bio .hexagon-mask:hover .hexagon-social {
+    display: block; }
+  #wrap-about #team .bio .name {
+    font-weight: bold;
+    font-size: 20px; }
+  #wrap-about #team .bio .job {
+    font-style: italic; }
+  #wrap-about #team .bio .whoiam {
+    font-size: 15px;
+    color: #999999;
+    line-height: 20px;
+    padding: 0px 35px; }
+  #wrap-about #team .team_message {
+    display: table-cell;
+    float: none;
+    vertical-align: middle; }
+    #wrap-about #team .team_message .number_of_members {
+      font-size: 80px; }
+    #wrap-about #team .team_message .message {
+      font-size: 18px; }

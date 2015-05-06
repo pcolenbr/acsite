@@ -4,16 +4,16 @@
   margin-top: 50px;
   margin-bottom: 55px; }
 
-.hexagon-services .hexagon-mask {
+.hexagon-services .hexagon-mask, .hexagon-profile .hexagon-mask {
   margin: 40px auto 0;
   position: relative;
   width: 150px;
   height: 150px;
   overflow: hidden;
   cursor: pointer; }
-  .hexagon-services .hexagon-mask img {
+  .hexagon-services .hexagon-mask img, .hexagon-profile .hexagon-mask img {
     height: 150px; }
-  .hexagon-services .hexagon-mask .mask {
+  .hexagon-services .hexagon-mask .mask, .hexagon-profile .hexagon-mask .mask {
     background: transparent url(../../images/hexagon-mask-full.png) repeat center center;
     -webkit-transition: -webkit-transform 300ms ease-out;
     -moz-transition: -moz-transform 300ms ease-out;
@@ -28,13 +28,22 @@
     top: -50%;
     pointer-events: none;
     zoom: 1; }
-  .hexagon-services .hexagon-mask:hover .mask {
+  .hexagon-services .hexagon-mask:hover .mask, .hexagon-profile .hexagon-mask:hover .mask {
     -webkit-transform: rotate(30deg);
     -moz-transform: rotate(30deg);
     -ms-transform: rotate(30deg);
     -o-transform: rotate(30deg);
     transform: rotate(30deg); }
-.hexagon-services .num {
+  .hexagon-services .hexagon-mask .mask-bg, .hexagon-profile .hexagon-mask .mask-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+    background-color: #000000; }
+  .hexagon-services .hexagon-mask:hover .mask-bg, .hexagon-profile .hexagon-mask:hover .mask-bg {
+    display: block; }
+.hexagon-services .num, .hexagon-profile .num {
   font-size: 1.1em;
   color: #FFFFFF;
   font-weight: bold;
@@ -52,23 +61,23 @@
   right: 21px;
   bottom: 3px;
   z-index: 99999; }
-.hexagon-services .num-blue, .hexagon-services .btn-blue, .hexagon-services .btn-blue:hover, .hexagon-services .btn-blue:after {
+.hexagon-services .num-blue, .hexagon-services .btn-blue, .hexagon-services .btn-blue:hover, .hexagon-services .btn-blue:after, .hexagon-profile .num-blue, .hexagon-profile .btn-blue, .hexagon-profile .btn-blue:hover, .hexagon-profile .btn-blue:after {
   background-color: #15639E; }
-.hexagon-services .num-orange, .hexagon-services .btn-carrot, .hexagon-services .btn-carrot:hover, .hexagon-services .btn-carrot:after {
+.hexagon-services .num-orange, .hexagon-services .btn-carrot, .hexagon-services .btn-carrot:hover, .hexagon-services .btn-carrot:after, .hexagon-profile .num-orange, .hexagon-profile .btn-carrot, .hexagon-profile .btn-carrot:hover, .hexagon-profile .btn-carrot:after {
   background-color: #E05E15; }
-.hexagon-services .num-grey, .hexagon-services .btn-grey, .hexagon-services .btn-grey:hover, .hexagon-services .btn-grey:after {
+.hexagon-services .num-grey, .hexagon-services .btn-grey, .hexagon-services .btn-grey:hover, .hexagon-services .btn-grey:after, .hexagon-profile .num-grey, .hexagon-profile .btn-grey, .hexagon-profile .btn-grey:hover, .hexagon-profile .btn-grey:after {
   background-color: #3C414C; }
-.hexagon-services .num-red, .hexagon-services .btn-red, .hexagon-services .btn-red:hover, .hexagon-services .btn-red:after {
+.hexagon-services .num-red, .hexagon-services .btn-red, .hexagon-services .btn-red:hover, .hexagon-services .btn-red:after, .hexagon-profile .num-red, .hexagon-profile .btn-red, .hexagon-profile .btn-red:hover, .hexagon-profile .btn-red:after {
   background-color: #8F1612; }
-.hexagon-services h3 {
+.hexagon-services h3, .hexagon-profile h3 {
   font-size: 21px;
   font-weight: bold;
   color: #3c424d; }
-.hexagon-services p {
+.hexagon-services p, .hexagon-profile p {
   font-size: 16px;
   margin-bottom: 30px;
   color: #3c424d; }
-.hexagon-services .btn {
+.hexagon-services .btn, .hexagon-profile .btn {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -81,11 +90,11 @@
   position: relative;
   color: #FFF;
   line-height: 1.618em; }
-  .hexagon-services .btn:hover {
+  .hexagon-services .btn:hover, .hexagon-profile .btn:hover {
     color: #FFF;
     text-decoration: none;
     opacity: 0.6; }
-  .hexagon-services .btn:after {
+  .hexagon-services .btn:after, .hexagon-profile .btn:after {
     display: block;
     content: "";
     top: 0px;
