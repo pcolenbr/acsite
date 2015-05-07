@@ -4,6 +4,15 @@
   margin-top: 50px;
   margin-bottom: 55px; }
 
+h1.title {
+  color: #000000;
+  font-size: 45px;
+  font-weight: bold;
+  margin: 0px; }
+
+h3.subtitle {
+  font-size: 20px; }
+
 .hexagon-services .hexagon-mask, .hexagon-profile .hexagon-mask {
   margin: 40px auto 0;
   position: relative;

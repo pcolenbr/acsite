@@ -1,0 +1,30 @@
+#wrap-contact #head {
+  padding-top: 100px;
+  text-align: center; }
+  #wrap-contact #head #intro {
+    font-size: 23px;
+    margin-top: -20px; }
+#wrap-contact #location-menu {
+  padding: 30px 0px;
+  text-align: center;
+  font-size: 22px; }
+  #wrap-contact #location-menu .location-item {
+    padding: 0px 40px; }
+  #wrap-contact #location-menu .location-link {
+    color: #0b86a0; }
+    #wrap-contact #location-menu .location-link:hover {
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.6; }
+  #wrap-contact #location-menu .location-link-active {
+    font-weight: bold; }
+#wrap-contact #gmap #gmail-overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  width: 100%;
+  display: table;
+  height: 380px; }
+  #wrap-contact #gmap #gmail-overlay #button-div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
