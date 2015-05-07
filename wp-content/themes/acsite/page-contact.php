@@ -28,13 +28,69 @@
 		</section>
 
 		<section id="gmap">
-			<div id="gmail-overlay">
+			<div id="gmap-overlay">
 				<div id="button-div">
-					<a href="javascript:;" class="btn btn-blue">CLICK TO ACTIVATE</a>
+					<a class="btn btn-blue">CLICK TO ACTIVATE</a>
 				</div>
 			</div>
 
 			<iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.866917500437!2d-122.40253129999998!3d37.793158499999976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a698fd8eb%3A0xcfad419c0e900b47!2s400+Montgomery+St+%23305!5e0!3m2!1sen!2s!4v1400803033706" id="mapFrame"></iframe>
+		</section>
+
+		<section id="form">
+			<div class="container">
+				<h2 id="form-title">Get in Touch with Us</h2>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<h3 id="officeID">Contact info (Headquarters)</h3>
+						
+						<ul class="list-unstyled">
+							<li class="form-list-item">
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/map_marker.png"><span id="officeAddress">400 Montgomery Street, Suite 305<br>San Francisco, CA 94104</span>
+							</li>
+						
+							<li class="form-list-item">
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/phone1.png">
+								<span id="officePhone">Accounting Department: +1 415-990-3689<br>Marketing Department: +1 415 766-4179<br>Human Resources: +1 415-259-4214<br>Recruiting Department: +1 415-766-4177<br>General Inquiries: +1 415-766-4178</span>
+							</li>
+							
+							<li class="form-list-item">
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/print.png"><span id="officeFax">+1 415 766 4252</span>
+							</li>				
+							
+							<li class="form-list-item">
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/message.png"><span><a href="mailto:info@avenuecode.com" id="mailLink">info@avenuecode.com</a></span>
+							</li>				
+						</ul>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<form action="../email_contact.php" class="contact-form" method="post">
+							<div class="form-group">
+								<select class="form-control contact-form-input" id="location" name="cf_option">
+									<option value="1">US Business Inquiry</option>
+									<option value="2">Brazil Business Inquiry</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control contact-form-input" id="name" placeholder="Your name" name="cf_name">
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control contact-form-input" id="email" placeholder="Your email" name="cf_email">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control contact-form-input" id="website" placeholder="Website (optional)" name="cf_website">
+							</div>					
+							<div class="form-group">
+								<textarea class="form-control contact-form-input" rows="8" placeholder="Your message" name="cf_message"></textarea>
+							</div>
+							 
+							<button type="submit" class="btn btn-blue" value="send">SEND MESSAGE</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</section>
 
 	<?php endwhile; endif; ?>

@@ -18,13 +18,46 @@
       opacity: 0.6; }
   #wrap-contact #location-menu .location-link-active {
     font-weight: bold; }
-#wrap-contact #gmap #gmail-overlay {
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  width: 100%;
-  display: table;
-  height: 380px; }
-  #wrap-contact #gmap #gmail-overlay #button-div {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center; }
+#wrap-contact #gmap {
+  overflow: hidden;
+  height: 380px;
+  cursor: pointer; }
+  #wrap-contact #gmap #gmap-overlay {
+    background: #FFFFFF;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    display: table;
+    height: 380px; }
+    #wrap-contact #gmap #gmap-overlay #button-div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+#wrap-contact #form {
+  padding: 45px 0px; }
+  #wrap-contact #form #form-title {
+    margin-top: 0px;
+    margin-bottom: 30px; }
+  #wrap-contact #form #officeID {
+    margin-top: 0px;
+    margin-bottom: 20px; }
+  #wrap-contact #form .icon {
+    height: auto;
+    width: 32px;
+    margin-right: 20px;
+    float: left; }
+  #wrap-contact #form .form-list-item {
+    margin-bottom: 25px;
+    line-height: 30px; }
+    #wrap-contact #form .form-list-item span {
+      display: inline-block; }
+  #wrap-contact #form .contact-form-input {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    border-radius: 0px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    background: #EFEFEF;
+    border: none; }

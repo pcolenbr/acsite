@@ -35,19 +35,60 @@
 		}
 	}
 
+	$map_height: 380px;
 	#gmap {
-		#gmail-overlay {
-			background-color: rgba(255, 255, 255, 0.5);
+		overflow: hidden;
+  		height: $map_height;
+  		cursor: pointer;
+
+		#gmap-overlay {
+			background: #FFFFFF;
+			opacity: 0.5;
 			position: absolute;
 			width: 100%;
 			display: table;
-			height: 380px;
+			height: $map_height;
 
 			#button-div {
 				display: table-cell;
 				vertical-align: middle;
 				text-align: center;
 			}
+		}
+	}
+
+	#form {
+		padding: 45px 0px;
+
+		#form-title {
+			margin-top: 0px;
+			margin-bottom: 30px;
+		}
+
+		#officeID {
+			margin-top: 0px;
+			margin-bottom: 20px;
+		}
+
+		.icon {
+			height: auto;
+			width: 32px;
+			margin-right: 20px;
+			float: left;
+		}
+
+		.form-list-item {
+			margin-bottom: 25px;
+			line-height: 30px;
+			span {
+				display: inline-block;
+			}
+		}
+
+		.contact-form-input {
+			@include border-radius(0px);
+			background: #EFEFEF;
+			border: none;
 		}
 	}
 }
