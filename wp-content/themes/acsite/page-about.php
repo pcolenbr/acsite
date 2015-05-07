@@ -127,7 +127,126 @@
 			</div>
 		</section>
 
+		<section id="culture">
+			<div class="container">
+				<h1 class="title">CULTURE</h1>
 
+				<hr class="border-title"></hr>
+
+				<h3 class="subtitle">"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you chose.<br>You're on your own. And you know what you know. And YOU are the who'll decide where to go... "<br><br>-Dr. Seuss</h3>
+
+				<div id="content" class="row">
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<p>We encourage big dreams. We believe the journey to achieving these dreams starts with our culture.</p>
+				        <p>At Avenue Code, we promote:</p>
+				        
+				        <h1 class="culture-keyword">GROWTH</h1>
+				        <p>Take initiative to learn to new things that interest you and benefit the team.</p>
+				        
+				        <h1 class="culture-keyword">EQUALITY</h1>
+				        <p>In our ego-free office, we have an open door policy.<br>Take your ideas all the way to the top.</p>
+				        
+				        <h1 class="culture-keyword">CREATIVE EXCELLENCE</h1>
+				        <p>We are a diverse community of strategists who love to find original solutions to complex challenges.</p>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<img src="<?php bloginfo('template_directory'); ?>/images/suitcaseNoBkg.png" class="img-responsive">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="beginning">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<img src="<?php bloginfo('template_directory'); ?>/images/in_the_beginning_2.jpg" alt="USA Beginning Photo" id="usaBeginningPhoto" class="img-responsive"/>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<h5 class="subtitle">IN THE BEGINNING...</h5>
+						<p>We started as a small group of people in a one-room office in San Francisco’s Financial District. Zeo began by helping a big IT organization with their Agile transformation and soon had a desire to develop more talent with these skills and help IT organizations become more innovative, efficient, and Agile. Amir joined the journey early on, bringing his expertise in large-scale software development to the table. Today Avenue Code has multiple offices in different countries with a plethora of Fortune 100 clients.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-8">
+						<h5 class="subtitle">THE ORIGIN OF OUR BRAZIL TEAM...</h5>
+						<p>We started in a very small office, where the bathroom served as a phone booth, in the middle of multi-cultural Belo Horizonte's Savassi neighborhood. As a group of four people we concept-proofed the nearshore strategy, exercising Agile methodologies and leveraging video conferences, often streaming continuous live video feed so that the remote team felt like they were in the same room as their peers. Two people covered administration, human resources, finances, accountability, recruiting, facilities, engineering management and UI training, and coaching the team with their English.</p>
+						<p>In nine months we had tripled in size and had to move to a larger office in Savassi. We created a recruiting group, and established a mentoring team known as "buddies." We were able to accelerate our growth, expanding to over 50 people. By the second year, our third office was set up in partnership with Pontifícia Universidade Católica (PUC) university, on the university campus. Avenue Code started to take part in larger conferences and events around the development of the Agile community in Brazil. We gained clients in São Paulo and today have grown to more than 150 people. Avenue Code consolidated the teams in Belo Horizonte into a single expansive office in Savassi, adding a new office in São Paulo, and we serve an expanding set of clients in the United States and Brazil.</p>
+					</div>
+
+					<div id="brPhotosContainer" class = "col-xs-12 col-sm-12 col-md-4">
+						<img src="<?php bloginfo('template_directory'); ?>/images/in_the_beginning_br01.jpg" alt="Brazil's Beginning Photo" class="brBeginningPhoto img-responsive"/>
+						<img src="<?php bloginfo('template_directory'); ?>/images/in_the_beginning_br02.jpg" alt="Brazil's Beginning Photo" class="brBeginningPhoto img-responsive"/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="here-we-are">
+			<div id="header" class="container">
+				<h1 class="title">...and now here we are</h1>
+				<hr class="border-title"></hr>
+				<h3>we are continuously growing - as a company, as individuals, and as a driven team...</h3>
+			</div>
+
+			<div id="make_inovation">
+				<div class="container">
+					<h2 class="text">MAKE WAY FOR INNOVATION</h2>
+				</div>
+			</div>
+		</section>
+
+		<section id="events">
+			<?php 
+				$args = array('post_type' => 'event', 'posts_per_page' => 1,);
+				$event = get_posts($args);
+			?>
+
+			<div class="container">
+				<h1 class="title">EVENTS</h1>
+				<hr class="border-title"></hr>
+
+				<div class="content">
+					<?php if (!empty($event)) { ?>
+						<?php $events_att = get_post_meta( $event[0]->ID, 'events_attributes', true); ?>
+						<h3 class="post_title"><?php echo $event[0]->post_title ?></h3>
+						<div class="details"><?php echo $events_att[0]['event-date'] .'<br>'. $events_att[0]['event-local']; ?></div>	
+					<?php } else { ?>
+						<h3 class="empty_array">No Upcoming Events</h3>
+					<?php } ?>
+				</div>
+
+				<a href="<?php echo esc_url(get_permalink(get_page_by_title('events'))); ?>" class="btn btn-blue">See More Events</a>
+			</div>
+		</section>
+
+		<section id="press">
+			<?php 
+				$args = array('post_type' => 'releases', 'posts_per_page' => 1,);
+				$releases = get_posts($args);
+			?>
+
+			<div class="container">
+				<h1 class="title">PRESS</h1>
+				<hr class="border-title"></hr>
+
+				<div class="content">
+					<?php if (!empty($releases)) { ?>
+						<a class="press_link" href="<?php echo get_permalink($releases->ID) ?>">
+							<h3 class="post_title"><?php echo $releases[0]->post_title ?></h3>
+							<div class="excerpt"><?php echo $releases[0]->post_excerpt ?></div>	
+						</a>
+					<?php } else { ?>
+						<h3 class="empty_array">No Press Releases</h3>
+					<?php } ?>
+				</div>
+
+				<a href="<?php echo esc_url(get_permalink(get_page_by_title('press'))); ?>" class="btn btn-blue">Read More Articles</a>
+			</div>
+		</section>
 	<?php endwhile; endif; ?>
 </div>
 <?php get_footer(); ?>

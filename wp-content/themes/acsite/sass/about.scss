@@ -12,6 +12,12 @@
 		}
 	}
 
+	h3 {
+		&.subtitle {
+			font-size: 20px;
+		}
+	}
+
 	#what-we-do {
 		padding-top: 120px;
 		text-align: center;
@@ -181,6 +187,93 @@
 			}
 			.message {
 				font-size: 18px;
+			}
+		}
+	}
+
+	#culture {
+		padding-top: 35px;
+		text-align: center;
+		h3 {
+			&.subtitle {
+				font-style: italic;
+			}
+		}
+
+		#content {
+			margin-top: 40px;
+			text-align: left;
+			line-height: 22px;
+
+			.culture-keyword {
+				color: $base_color;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	#beginning {
+		background: #DDDDDD;
+		padding: 40px 0px;
+		text-align: justify;
+		line-height: 28px;
+
+		.subtitle {
+			font-weight: bold;
+			font-size: 25px;
+		}
+		
+		#brPhotosContainer {
+			padding-top: 55px;
+			.brBeginningPhoto {
+				margin-bottom: 35px;
+			}
+		}
+	}
+
+	#here-we-are {
+		padding-top: 35px;
+		text-align: center;
+
+		#header {
+			margin-bottom: 60px;
+		}
+
+		#make_inovation {
+			background: #009EE0;
+			color: #FFFFFF;
+			padding: 50px 0px;
+			.text {
+				margin: 0px;
+				font-weight: bold;
+				font-size: 60px;
+			}
+		}
+	}
+
+	#events, #press {
+		text-align: center;
+		padding-top: 35px;
+		margin-bottom: 40px;
+
+		.content {
+			margin-bottom: 30px;
+		}
+		.post_title {
+			color: #000000;
+
+		}
+		.details {
+			color: #606060;
+		}
+		.excerpt {
+			color: $base_color;
+		}
+		.press_link {
+			&:hover {
+				text-decoration: none;
+				color: $base_color;
+				opacity: 0.6;
 			}
 		}
 	}
