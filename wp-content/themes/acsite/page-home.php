@@ -7,13 +7,9 @@
 
 			<div class="home-cover-header container">
 				<div class = "title-box">
-					<?php $cover_texts = get_post_meta( $post->ID, 'homecovertexts', true ); ?>
-
-					<h1><?php if(!empty($cover_texts[0]['title']))
-															echo $cover_texts[0]['title']; ?></h1>
+					<h1>SOFTWARE INNOVATION IS A JOURNEY</h1>
 						
-					<p><?php if(!empty($cover_texts[0]['subtext']))
-														echo $cover_texts[0]['subtext']; ?></p>
+					<p>Let us be your guide. Delivering the world's largest ebusiness solutions</p>
 				</div>
 			</div>
 
@@ -66,15 +62,13 @@
 		<section class="container" id="clients">
 			<?php $home_portfolio_header = get_post_meta( $post->ID, 'home-portfolioheader', true ); ?>
 			
-			<?php if( !empty( $home_portfolio_header[0]['title'] ) ) { ?>
-				<h1 class="title"><?php echo $home_portfolio_header[0]['title'] ?></h1>
-			<?php } ?>
+			<h1 class="title">CLIENTS & PARTNERS</h1>
 
 			<hr class="border-title"></hr>
 
-			<?php if( !empty( $home_portfolio_header[0]['subtitle'] ) ) { ?>
-				<h3 class="subtitle"><?php echo $home_portfolio_header[0]['subtitle']; ?></h3>
-			<?php } ?>
+			<h3 class="subtitle">
+				<p>&ldquo;I don&rsquo;t see Avenue Code as a mere vendor that provides us with on-demand service. They are our partner.<br />They engage in our conversations. They understand our concerns. They really care about our success.&rdquo;<br />-- SVP of a Fortune 50 Retailer</p>
+			</h3>
 
 			<nav id="clients-partners-filters">
 				<ul>
