@@ -38,7 +38,7 @@
 		</section>
 
 		<section id="form">
-			<div class="container">
+			<div class="container" id="contact-info-list">
 				<h2 id="form-title">Get in Touch with Us</h2>
 
 				<div class="row">
@@ -47,20 +47,20 @@
 						
 						<ul class="list-unstyled">
 							<li class="form-list-item">
-								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/map_marker.png"><span id="officeAddress">400 Montgomery Street, Suite 305<br>San Francisco, CA 94104</span>
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/map_marker.png" id="office-address-image"><span id="officeAddress">400 Montgomery Street, Suite 305<br>San Francisco, CA 94104</span>
 							</li>
 						
 							<li class="form-list-item">
-								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/phone1.png">
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/phone1.png" id ="office-phone-image">
 								<span id="officePhone">Accounting Department: +1 415-990-3689<br>Marketing Department: +1 415 766-4179<br>Human Resources: +1 415-259-4214<br>Recruiting Department: +1 415-766-4177<br>General Inquiries: +1 415-766-4178</span>
 							</li>
 							
 							<li class="form-list-item">
-								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/print.png"><span id="officeFax">+1 415 766 4252</span>
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/print.png" id="office-fax-image"><span id="officeFax">+1 415 766 4252</span>
 							</li>				
 							
 							<li class="form-list-item">
-								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/message.png"><span><a href="mailto:info@avenuecode.com" id="mailLink">info@avenuecode.com</a></span>
+								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/message.png" id="office-mail-link"><span><a href="mailto:info@avenuecode.com" id="mailLink">info@avenuecode.com</a></span>
 							</li>				
 						</ul>
 					</div>
