@@ -65,29 +65,36 @@
 						</ul>
 					</div>
 
-					<div class="col-xs-12 col-sm-12 col-md-6">
-						<form action="../email_contact.php" class="contact-form" method="post">
+					<div id="div_form" class="col-xs-12 col-sm-12 col-md-6">
+						
+						<div id="block_screen"></div>
+
+						<div style="display: none;" id="cf_success" class="alert alert-success">Thank you for the message. We will contact you shortly.</div>
+						<div style="display: none;" id="cf_error" class="alert alert-danger">Message failed. Please, send an email to info@avenuecode.com</div>
+						<div style="display: none;" id="cf_warning" class="alert alert-warning"></div>
+
+						<div id="form">
 							<div class="form-group">
-								<select class="form-control contact-form-input" id="location" name="cf_option">
-									<option value="1">US Business Inquiry</option>
+								<select class="form-control contact-form-input" id="cf_location" name="cf_option">
+									<option value="1" selected>US Business Inquiry</option>
 									<option value="2">Brazil Business Inquiry</option>
 								</select>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control contact-form-input" id="name" placeholder="Your name" name="cf_name">
+								<input type="text" class="form-control contact-form-input" id="cf_name" placeholder="Your name" name="cf_name">
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-control contact-form-input" id="email" placeholder="Your email" name="cf_email">
+								<input type="email" class="form-control contact-form-input" id="cf_email" placeholder="Your email" name="cf_email">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control contact-form-input" id="website" placeholder="Website (optional)" name="cf_website">
+								<input type="text" class="form-control contact-form-input" id="cf_website" placeholder="Website (optional)" name="cf_website">
 							</div>					
 							<div class="form-group">
-								<textarea class="form-control contact-form-input" rows="8" placeholder="Your message" name="cf_message"></textarea>
+								<textarea class="form-control contact-form-input" rows="8" id="cf_message" placeholder="Your message" name="cf_message"></textarea>
 							</div>
 							 
-							<button type="submit" class="btn btn-blue" value="send">SEND MESSAGE</button>
-						</form>
+							<a href="#" id="cf_send_button" class="btn btn-blue" >SEND MESSAGE</a>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -4,6 +4,9 @@ require_once 'utilities/informations_menu.php';
 
 add_theme_support( 'post-thumbnails' ); 
 
+add_action( 'wp_ajax_nopriv_ac_contact_send_email', 'ac_contact_send_email');
+add_action( 'wp_ajax_ac_contact_send_email', 'ac_contact_send_email');
+
 // Resgister styles and scripts using WP function to improve cache
 function ac_load_utilities() {
 	ac_styles();
@@ -22,6 +25,8 @@ function ac_scripts() {
 
 	wp_register_script( 'ac_script', get_template_directory_uri() .'/scripts/dist/main_script.min.js', array('jquery', 'ac_owl_carousel'), null );
 	wp_enqueue_script('ac_script', array('jquery', 'ac_owl_carousel', 'ac_isotope'));
+
+	wp_localize_script( 'ac_script', 'ACAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
 
 function ac_styles() {
@@ -123,7 +128,43 @@ function create_team($bios) {
 	if(($numb_of_bios % 4) != 0) {
 		echo '</div>';
 	}
+}
 
+function ac_contact_send_email() {
+	$response = json_encode( array( 'success' => false ) );	
+
+	$location = $_POST ['location'];
+	$name = $_POST ['name'];
+	$email = $_POST ['email'];
+	$website = $_POST ['website'];
+	$message = $_POST ['message'];
+
+	if($location == 1 ) {
+		$mail_to = 'info@avenuecode.com';		
+	} else {
+		$mail_to = 'brazil.info@avenuecode.com';
+	}
+
+	$subject = 'Website email submission from '. $location;
+
+	$body_message = 'From: '. $name . "<br>";
+	$body_message .= 'E-mail: ' . $email . "<br>";
+	$body_message .= 'Website: ' . $website . "<br>";
+	$body_message .= 'Message: ' . $message;
+
+	$headers = 'Content-Type: text/html; charset=UTF-8' . "\r\n";
+	$headers .= 'From: ' . $email . "\r\n";
+	$headers .= 'Reply-To: '. $email . "\r\n";
+
+	$status = wp_mail( $mail_to, $subject, $body_message, $headers );
+
+	if($status == true) {
+		$response = json_encode( array( 'success' => true ) );	
+	}
+
+	header( "Content-Type: application/json" );
+	echo $response;
+	exit;
 }
 
 ?>

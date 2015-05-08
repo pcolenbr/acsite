@@ -57,8 +57,18 @@
 		}
 	}
 
+	#block_screen {
+		position: absolute;
+		right: 0px;
+		opacity: 0.5;
+		width: 100%;
+		display: none;
+		background: #000000;
+		z-index: 999;
+	}
+
 	#form {
-		padding: 45px 0px;
+		padding: 0px 0px 45px;
 
 		#form-title {
 			margin-top: 0px;
