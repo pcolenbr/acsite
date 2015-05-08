@@ -118,3 +118,61 @@ h3.subtitle {
 
 .num-red, .btn-red, .btn-red:hover, .btn-red:after {
   background-color: #8F1612; }
+
+#clients-partners-isotopes-section {
+  padding-top: 80px;
+  text-align: center; }
+  #clients-partners-isotopes-section .border-title {
+    margin-bottom: 20px; }
+  #clients-partners-isotopes-section .subtitle {
+    color: #0b86a0;
+    font-size: 20px; }
+  #clients-partners-isotopes-section #clients-partners-filters ul {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    #clients-partners-isotopes-section #clients-partners-filters ul li {
+      padding: 5px 20px;
+      display: inline-block; }
+      #clients-partners-isotopes-section #clients-partners-filters ul li.active a {
+        background: #0b86a0;
+        color: #FFF; }
+        #clients-partners-isotopes-section #clients-partners-filters ul li.active a:hover {
+          color: #FFF; }
+      #clients-partners-isotopes-section #clients-partners-filters ul li a {
+        color: #999;
+        display: block;
+        padding: 2px 12px;
+        background-color: #F5F4F4;
+        text-decoration: none; }
+        #clients-partners-isotopes-section #clients-partners-filters ul li a:hover {
+          text-decoration: none;
+          color: #0b86a0; }
+  #clients-partners-isotopes-section #clients-partners-isotopes {
+    text-align: center; }
+    #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item {
+      width: 25%; }
+      #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item img {
+        width: 100%; }
+      #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item .clients-partners-hover {
+        background-color: rgba(45, 63, 81, 0.8);
+        -webkit-transition: opacity .4s ease;
+        transition: opacity .4s ease;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        padding: 20px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block; }
+        #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item .clients-partners-hover .table {
+          height: 100%;
+          display: table; }
+          #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item .clients-partners-hover .table .middle {
+            vertical-align: middle;
+            display: table-cell; }
+            #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item .clients-partners-hover .table .middle .description {
+              font-size: 23px;
+              color: #FFF; }
+      #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item:hover .clients-partners-hover {
+        opacity: 1; }
