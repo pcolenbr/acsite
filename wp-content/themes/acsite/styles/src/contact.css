@@ -42,9 +42,8 @@
   background: #000000;
   z-index: 999; }
 #wrap-contact #form {
-  padding: 35px 0px 45px; }
+  padding: 0px 0px 45px 0px; }
   #wrap-contact #form #form-title {
-    text-align: center;
     margin-top: 0px;
     margin-bottom: 30px; }
   #wrap-contact #form #officeID {
@@ -70,5 +69,3 @@
     /* stops bg color from leaking outside the border: */
     background: #EFEFEF;
     border: none; }
-
-/*# sourceMappingURL=contact.css.map */

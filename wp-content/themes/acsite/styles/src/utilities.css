@@ -55,11 +55,11 @@ h3.subtitle {
 .hexagon-services h3, .hexagon-profile h3 {
   font-size: 21px;
   font-weight: bold;
-  color: #3C424D; }
+  color: #3c424d; }
 .hexagon-services p, .hexagon-profile p {
   font-size: 16px;
   margin-bottom: 30px;
-  color: #3C424D; }
+  color: #3c424d; }
 
 .btn {
   border-radius: 0px;
@@ -118,5 +118,3 @@ h3.subtitle {
 
 .num-red, .btn-red, .btn-red:hover, .btn-red:after {
   background-color: #8F1612; }
-
-/*# sourceMappingURL=utilities.css.map */
