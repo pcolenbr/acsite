@@ -1,6 +1,47 @@
 @import 'variables';
 @import 'mixins';
 
+#wrap-services {
+	#top {
+		text-align: center;
+		padding-top: 50px;
+	}
+
+	#multimidias {
+		text-align: center;
+		padding-top: 50px;
+
+		.subtitle {
+			font-weight: bold;
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+
+		.multimedia-iframe {
+			width: 100%;
+  			min-height: 250px;
+		}
+
+		.multimedia-element {
+			width: 45%;
+			padding: 0px 10px;
+		}
+
+		.multimedia-menu-item {
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			.multimedia-menu-item-link {
+				width: 100%;
+
+				&.active {
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+}
+
+//Sub-pages style
 #services-menu {
 	text-align: center;	
 }
