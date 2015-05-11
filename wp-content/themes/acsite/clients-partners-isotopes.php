@@ -26,7 +26,7 @@
 
 
 	<div id="clients-partners-isotopes">
-		<?php $args_events = array('post_type' => 'clients_partners', 'posts_per_page' => -1, ); ?>
+		<?php $args_events = array('post_type' => 'clients_partners', 'posts_per_page' => -1); ?>
 
 		<?php $query = new WP_Query( $args_events ); ?>
 
