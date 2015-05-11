@@ -6,7 +6,7 @@ jQuery(function($) {
 		rewindSpeed : 1000,
 		transitionStyle: 'fade',
 		singleItem: true
-	});
+	}); 
 
 	$('#leadership_img').load(function(){
         var img_h = $('#leadership_img').css('height');
