@@ -56,7 +56,7 @@
 							</li>
 							
 							<li class="form-list-item">
-								<img class="icon" src="<?php bloginfo('template_directory'); ?>/images/print.png"><span id="officeFax">+1 415 766 4252</span>
+								<img class="icon" id="office-fax-image" src="<?php bloginfo('template_directory'); ?>/images/print.png"><span id="officeFax">+1 415 766 4252</span>
 							</li>				
 							
 							<li class="form-list-item">
