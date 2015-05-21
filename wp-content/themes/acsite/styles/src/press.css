@@ -1,0 +1,10 @@
+#wrap-press .header {
+  padding-top: 40px;
+  text-align: center; }
+#wrap-press #releases {
+  padding-bottom: 30px; }
+#wrap-press .release-excerpt {
+  color: #606060;
+  font-style: italic; }
+#wrap-press .release-read-more-div {
+  text-align: right; }

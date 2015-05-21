@@ -1,6 +1,8 @@
 #wrap-single-code-highway #post-code-highway {
   max-width: 85%;
   margin: auto; }
+#wrap-single-code-highway #post-header {
+  margin-bottom: 20px; }
 #wrap-single-code-highway #authorAvatar {
   margin-bottom: 25px; }
 #wrap-single-code-highway .post-border-title {

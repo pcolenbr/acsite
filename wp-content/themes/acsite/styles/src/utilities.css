@@ -87,9 +87,10 @@ h3.subtitle {
     height: 100%;
     width: 4px;
     border: 1px solid transparent; }
-  .btn.back-btn .back {
-    margin-right: 7px;
+  .btn.back-btn {
     padding: 5px 20px; }
+    .btn.back-btn .back {
+      margin-right: 7px; }
 
 .num {
   font-size: 1.1em;
