@@ -1,0 +1,6 @@
+wp-content/themes/acsite/node_modules
+wp-content/themes/acsite/.sass-cache
+wp-content/themes/acsite/styles/*.map
+wp-content/themes/acsite/styles/dist/*.min.css
+wp-content/themes/acsite/scripts/dist/*.min.js
+
