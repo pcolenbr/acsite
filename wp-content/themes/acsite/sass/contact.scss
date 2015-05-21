@@ -1,0 +1,104 @@
+@import 'variables';
+@import 'mixins';
+
+#wrap-contact {
+	#head {
+		padding-top: 100px;
+		text-align: center;
+		
+
+		#intro {
+			font-size: 23px;
+			margin-top: -20px;
+		}
+	}
+
+	#location-menu {
+		padding: 30px 0px;
+		text-align: center;
+		font-size: 22px;
+		.location-item {
+			padding: 0px 40px;
+		}
+		
+		.location-link {
+			color: $base_color;
+			&:hover {
+				text-decoration: none;
+				cursor: pointer;
+				opacity: 0.6;
+			}
+		}
+
+		.location-link-active {
+			font-weight: bold;
+		}
+	}
+
+	$map_height: 380px;
+	#gmap {
+		overflow: hidden;
+  		height: $map_height;
+  		cursor: pointer;
+
+		#gmap-overlay {
+			background: #FFFFFF;
+			opacity: 0.5;
+			position: absolute;
+			width: 100%;
+			display: table;
+			height: $map_height;
+
+			#button-div {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+		}
+	}
+
+	#block_screen {
+		position: absolute;
+		right: 0px;
+		opacity: 0.5;
+		width: 100%;
+		display: none;
+		background: #000000;
+		z-index: 999;
+	}
+
+	#form {
+		padding: 0px 0px 45px;
+
+		#form-title {
+			margin-top: 0px;
+			margin-bottom: 30px;
+		}
+
+		#officeID {
+			margin-top: 0px;
+			margin-bottom: 20px;
+		}
+
+		.icon {
+			height: auto;
+			width: 32px;
+			margin-right: 20px;
+			float: left;
+		}
+
+		.form-list-item {
+			margin-bottom: 25px;
+			line-height: 30px;
+			span {
+				display: inline-block;
+			}
+		}
+
+		.contact-form-input {
+			@include border-radius(0px);
+			background: #EFEFEF;
+			border: none;
+		}
+	}
+}

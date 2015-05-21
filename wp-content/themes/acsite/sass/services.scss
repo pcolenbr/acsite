@@ -1,0 +1,139 @@
+@import 'variables';
+@import 'mixins';
+
+#wrap-services {
+	#top {
+		text-align: center;
+		padding-top: 50px;
+	}
+
+	#multimidias {
+		text-align: center;
+		padding-top: 50px;
+
+		.subtitle {
+			font-weight: bold;
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+
+		.multimedia-iframe {
+			width: 100%;
+  			min-height: 250px;
+		}
+
+		.multimedia-element {
+			width: 45%;
+			padding: 0px 10px;
+		}
+
+		.multimedia-menu-item {
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			.multimedia-menu-item-link {
+				width: 100%;
+
+				&.active {
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+}
+
+//Sub-pages style
+#services-menu {
+	text-align: center;	
+}
+
+.service-title {
+	.border-title {
+		margin-bottom: 20px;
+	}
+
+	.div-title {
+		text-align: center;
+
+		h1 {
+			font-size: 45px;
+		  	font-weight: bold;
+		  	margin: 0px;
+		}
+
+		h2 {
+			font-size: 20px;
+			margin: 0px;
+		}
+	}
+
+	.div-body {
+		margin-top: 30px;
+	}
+}
+
+.service-onpage-menu {
+	ul {
+  		margin: 50px 0px;
+  		display: table;
+  		width: 100%;
+  		padding: 0px 50px;
+		li {
+			display: table-cell;
+			a {
+				color: $base_color;
+				&:hover {
+					text-decoration: none;
+					color: #1A1A1A;
+				}
+			}
+		}
+	}
+}
+
+#wrap-management-consulting {
+	#management-consulting-text {
+		.row {
+			margin-bottom: 40px;
+			&:nth-child(odd) {
+				.image-div {
+					float: right;
+				}
+			}
+		}
+		h3 {
+			margin-top: 0px;	
+		}
+	}
+}
+
+#wrap-project-ownership-implementation {
+	#project-ownership-implementation-text {
+		.row {
+			margin-bottom: 40px;
+			&:nth-child(odd) {
+				.image-div {
+					float: right;
+				}
+			}
+		}
+		h3 {
+			margin-top: 0px;	
+		}
+	}
+}
+
+#wrap-engineering-and-agile-professionals {
+	#engineering-and-agile-professionals-text {
+		.row {
+			margin-bottom: 40px;
+			&:nth-child(odd) {
+				.image-div {
+					float: right;
+				}
+			}
+		}
+		h3 {
+			margin-top: 0px;	
+		}
+	}
+}

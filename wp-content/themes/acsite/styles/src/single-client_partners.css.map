@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKC,wDAA4B;EAC3B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,IAAI;EAEjB,sEAAc;IACb,UAAU,EAAE,IAAI;IAChB,aAAa,EAAE,IAAI;AAIrB,0DAA8B;EAC7B,aAAa,EAAE,IAAI;AAGpB,6CAAiB;EAChB,aAAa,EAAE,IAAI",
+"sources": ["../../sass/single-client_partners.scss"],
+"names": [],
+"file": "single-client_partners.css"
+}

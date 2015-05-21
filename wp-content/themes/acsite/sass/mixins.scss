@@ -1,0 +1,16 @@
+@mixin border-radius($radius) {	
+  	border-radius: $radius;
+  	-webkit-border-radius: $radius;
+  	-moz-border-radius: $radius;
+	-khtml-border-radius: $radius;
+	border-radius: $radius;
+  	background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin rotate($radius) {	
+	-webkit-transform: rotate($radius);
+	-moz-transform: rotate($radius);
+	-ms-transform: rotate($radius);
+	-o-transform: rotate($radius);
+	transform: rotate($radius);
+}
