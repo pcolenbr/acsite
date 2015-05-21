@@ -15,16 +15,27 @@ function ac_load_utilities() {
 add_action ('wp_enqueue_scripts', 'ac_load_utilities');
 
 function ac_scripts() {
+	wp_deregister_script('jquery');
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' );
 	wp_enqueue_script('jquery');
 	
 	wp_register_script( 'ac_owl_carousel', 'https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js', array('jquery') );
 	wp_enqueue_script('ac_owl_carousel', array('jquery'));
 
-	wp_register_script( 'ac_isotope', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.1.1/isotope.pkgd.min.js', array('jquery') );
+	wp_register_script( 'ac_owl_carousel', 'https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js', array('jquery') );
+	wp_enqueue_script('ac_owl_carousel', array('jquery'));
+
+	wp_register_script( 'ac_isotope', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js', array('jquery') );
 	wp_enqueue_script('ac_isotope', array('jquery'));
 
-	wp_register_script( 'ac_script', get_template_directory_uri() .'/scripts/dist/main_script.min.js', array('jquery', 'ac_owl_carousel'), null );
-	wp_enqueue_script('ac_script', array('jquery', 'ac_owl_carousel', 'ac_isotope'));
+	wp_register_script( 'ac_infinitescroll', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array('jquery', 'ac_isotope') );
+	wp_enqueue_script('ac_infinitescroll', array('jquery'));
+
+	wp_register_script( 'ac_imagesloaded', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js', array('jquery', 'ac_isotope') );
+	wp_enqueue_script('ac_imagesloaded', array('jquery'));
+
+	wp_register_script( 'ac_script', get_template_directory_uri() .'/scripts/dist/main_script.min.js', array('jquery', 'ac_owl_carousel'), array('jquery', 'ac_owl_carousel', 'ac_isotope', 'ac_infinitescroll') );
+	wp_enqueue_script('ac_script', array('jquery', 'ac_owl_carousel', 'ac_isotope', 'ac_infinitescroll'));
 
 	wp_localize_script( 'ac_script', 'ACAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
@@ -79,6 +90,18 @@ function register_my_menu() {
 		);
 }
 add_action( 'init', 'register_my_menu' );
+
+// Remove text editor from pages. Only custom fields are used to edit pages
+function remove_pages_editor(){
+    remove_post_type_support( 'page', 'editor' );
+}   
+add_action( 'init', 'remove_pages_editor' );
+
+// The the execerpt length to 30 words
+function custom_excerpt_length( $length ) {
+  return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function create_team($bios) {
 	$numb_of_bios = 0;

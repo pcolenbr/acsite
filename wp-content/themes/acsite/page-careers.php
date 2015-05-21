@@ -133,7 +133,7 @@
 									</span>
 								</span>
 							</span>
-							<img src="<?php echo $image[0] ?>" alt="">
+							<img src="<?php echo $image[0] ?>">
 						</div>
 				<?php } ?>
 			</div>

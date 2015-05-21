@@ -109,6 +109,13 @@ h3 {
 		width: 4px;
 		border: 1px solid transparent;
 	}
+
+	&.back-btn {
+		.back {
+			margin-right: 7px;
+			padding: 5px 20px;
+		}
+	}
 }
 
 .num {

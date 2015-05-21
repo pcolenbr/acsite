@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'mixins';
+
+#wrap-single-code-highway {
+
+	#post-code-highway {
+		max-width: 85%;
+		margin: auto;
+	}
+
+	#authorAvatar {
+		margin-bottom: 25px;
+	}
+
+	.post-border-title {
+		border-top: 1px solid #000;
+		width: 90%;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	#postAttributes {
+		text-align: center;
+
+		.postAttributeItem {
+			display: inline-block;
+			margin: 0px 10px;
+		}
+	}
+
+	.post-title {
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 0px;
+	}
+
+	.post-subtitle {
+		text-align: center;
+		color: #898989;
+		margin-top: 5px;
+		margin-bottom: 30px;
+	}
+
+	#by-author {
+		width: 90%;
+  		margin: auto;
+		text-align: right;
+	}
+
+}
