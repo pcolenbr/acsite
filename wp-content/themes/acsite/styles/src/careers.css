@@ -45,9 +45,48 @@
     padding: 0px 30px; }
   #wrap-careers #open-positions .open-position-location-link {
     width: 160px; }
+  #wrap-careers #open-positions #jobs-table {
+    width: 80%;
+    margin: 0 auto; }
+    #wrap-careers #open-positions #jobs-table .jobs-row:hover {
+      background: #0b86a0;
+      cursor: pointer; }
+      #wrap-careers #open-positions #jobs-table .jobs-row:hover .show-details {
+        color: #FFF;
+        font-weight: bold; }
+        #wrap-careers #open-positions #jobs-table .jobs-row:hover .show-details:hover {
+          text-decoration: none; }
+    #wrap-careers #open-positions #jobs-table .jobs-row .show-details {
+      color: #000; }
+    #wrap-careers #open-positions #jobs-table .jobs-row .jobs-title-column {
+      padding-left: 10px;
+      text-align: left; }
+    #wrap-careers #open-positions #jobs-table .jobs-row .jobs-location-column {
+      padding-right: 10px;
+      text-align: right; }
+  #wrap-careers #open-positions #job-details {
+    display: none;
+    width: 80%;
+    margin: 0 auto; }
+    #wrap-careers #open-positions #job-details #job-title {
+      color: #0b86a0; }
+    #wrap-careers #open-positions #job-details #job-description {
+      text-align: left;
+      text-decoration: none; }
+      #wrap-careers #open-positions #job-details #job-description strong {
+        color: #0b86a0; }
+      #wrap-careers #open-positions #job-details #job-description U {
+        text-decoration: none; }
+    #wrap-careers #open-positions #job-details #back-apply-btn {
+      float: left;
+      margin-top: 10px; }
+      #wrap-careers #open-positions #job-details #back-apply-btn #back-to-table {
+        margin-right: 10px; }
+    #wrap-careers #open-positions #job-details .jobShareBtn {
+      float: right; }
 #wrap-careers #working-at-ac {
   text-align: center;
-  padding-top: 40px 0px 0px; }
+  padding: 40px 0px 0px; }
   #wrap-careers #working-at-ac #working-at-ac-filters ul {
     text-align: center;
     margin-top: 20px;
@@ -97,3 +136,5 @@
               color: #FFF; }
       #wrap-careers #working-at-ac #working-at-ac-isotopes .working-at-ac-item:hover .working-at-ac-hover {
         opacity: 1; }
+
+/*# sourceMappingURL=careers.css.map */

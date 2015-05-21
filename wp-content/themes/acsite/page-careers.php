@@ -89,12 +89,30 @@
 			<div class="container">
 				<h1 class="title">OPEN POSITIONS</h1>
 				<hr class="border-title"></hr>
-
+				
 				<ul class="list-inline">
-					<li class="open-position-location-item"><a href="#" class="btn btn-blue open-position-location-link">San Francisco</a></li>
+					<li class="open-position-location-item"><a href="#open-positions" class="btn btn-blue open-position-location-link">San Francisco</a></li>
 					<li class="open-position-location-item"><a href="http://www.jobs.net/jobs/avenuecode/en-us/" target="_blank" class="btn btn-blue open-position-location-link">São Paulo</a></li>
 					<li class="open-position-location-item"><a href="http://www.jobs.net/jobs/avenuecode/en-us/" target="_blank" class="btn btn-blue open-position-location-link">Belo Horizonte</a></li>
 				</ul>
+
+				<div class="list-inline" id="job-list">
+					<table id="jobs-table" class="positions-list"></table>
+				</div>
+				<div id="job-details">
+					<h2 id="job-title"></h2>
+					<h4 id="job-city-and-type"></h4>
+					<p id="job-description"></p>
+					<div>
+						<div id="back-apply-btn">
+							<a class="btn btn-blue back-btn" id="back-to-table" href="#open-positions"><i class="fa fa-arrow-left back"></i>BACK</a>
+							<a href="" class="btn btn-blue" id="btnApply" target="_blank">APPLY NOW</a>
+						</div>
+						<div class="jobShareBtn">
+							<a id="shareFacebook" target="_blank" href="http://www.facebook.com/sharer.php?u=avenuecode.com/acnew/careers"><img src="<?php bloginfo('template_directory'); ?>/images/share_facebook.png"></a>
+						</div>
+					</div>	
+				</div>
 			</div>
 		</section>
 

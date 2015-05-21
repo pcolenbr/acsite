@@ -79,11 +79,84 @@
 		.open-position-location-link {
 			width: 160px;
 		}
+
+		#jobs-table {
+			width: 80%;
+			margin: 0 auto;
+		
+			.jobs-row {
+
+				&:hover {
+					background: $base_color;
+					cursor: pointer;
+
+					.show-details {
+						color: #FFF;
+						font-weight: bold;
+
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+
+				.show-details {
+					color: #000;
+				}
+
+				.jobs-title-column {
+					padding-left: 10px;
+					text-align: left;
+				}
+
+				.jobs-location-column {
+					padding-right: 10px;
+					text-align: right;
+				}
+			}
+		}
+
+		#job-details {
+			display: none;
+			width: 80%;
+			margin: 0 auto;
+
+			#job-title {
+				color: $base_color;
+			}
+
+			#job-description {
+				text-align: left;
+				text-decoration: none;
+
+				strong {
+					color: $base_color;
+
+				}
+
+				U {
+					text-decoration: none;
+				}
+			}
+
+			#back-apply-btn {
+				float: left;
+				margin-top: 10px;
+
+				#back-to-table {
+					margin-right: 10px;
+				}
+			}
+
+			.jobShareBtn {
+				float: right;
+			}
+		}
 	}
 
 	#working-at-ac {
 		text-align: center;
-		padding-top: 40px 0px 0px;
+		padding: 40px 0px 0px;
 
 		#working-at-ac-filters {
 			ul {
