@@ -62,7 +62,8 @@ jQuery(function($) {
 
 		var tam = dataGlobal.length,
 			table = $('#jobs-table'),
-			linkAnchor;
+			linkAnchor,
+			content;
 
 		jobAnchorList = [];
 		// listing jobs

@@ -1,3 +1,15 @@
+.nav-overwrited {
+  list-style: none; }
+  .nav-overwrited > li {
+    position: relative;
+    display: block; }
+    .nav-overwrited > li a {
+      position: relative;
+      display: block;
+      padding: 10px 15px; }
+    .nav-overwrited > li a:hover {
+      text-decoration: none; }
+
 .border-title {
   border-top: 2px solid #000;
   max-width: 300px;
@@ -55,11 +67,11 @@ h3.subtitle {
 .hexagon-services h3, .hexagon-profile h3 {
   font-size: 21px;
   font-weight: bold;
-  color: #3C424D; }
+  color: #3c424d; }
 .hexagon-services p, .hexagon-profile p {
   font-size: 16px;
   margin-bottom: 30px;
-  color: #3C424D; }
+  color: #3c424d; }
 
 .btn {
   border-radius: 0px;
@@ -180,5 +192,3 @@ h3.subtitle {
               color: #FFF; }
       #clients-partners-isotopes-section #clients-partners-isotopes .clients-partners-item:hover .clients-partners-hover {
         opacity: 1; }
-
-/*# sourceMappingURL=utilities.css.map */

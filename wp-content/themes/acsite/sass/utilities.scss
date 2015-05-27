@@ -1,6 +1,25 @@
 @import 'variables';
 @import 'mixins';
 
+.nav-overwrited {
+	list-style: none;
+
+	& > li {
+		position: relative;
+		display: block;
+
+		a {
+			position: relative;
+			display: block;
+	  		padding: 10px 15px;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}
+
 .border-title {
 	border-top: 2px solid #000;
 	max-width: 300px;

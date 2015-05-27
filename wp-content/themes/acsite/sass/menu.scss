@@ -1,6 +1,6 @@
 @import 'variables';
 
-.wrap-menu {
+#wrap-menu {
 	background: $base_color;
 
 	.navbar {
@@ -24,9 +24,37 @@
 		}
 	}
 
-	ul.navbar-nav {
+	#menu-underline {
 		border-bottom: 1px solid #FFF;
+		border-top: none;
+		clear: both;
+		margin: 0px;
+	}
+
+	.submenu-item {
+		text-transform: lowercase;
+
+		&.active {
+			border-top: 2px solid #FFF;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		a:hover {
+			background-color: #80D6E8;
+			opacity: 0.8;
+		}
+	}
+
+	#main-menu {
 		padding: 0px 20px;
+	}
+
+	#submenu {
+		clear: both;
+		padding: 0px;
 	}
 
 	#white-logo {

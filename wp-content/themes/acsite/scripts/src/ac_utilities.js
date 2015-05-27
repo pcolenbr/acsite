@@ -24,7 +24,7 @@ jQuery(function($) {
 			$('#clients-partners-filters li').removeClass();
 			$(this).parent().addClass('active');
 		});
-	}
+	} 
 
 	var multimedias_container = $("#container-multimedias");
 	if(multimedias_container){
@@ -45,5 +45,32 @@ jQuery(function($) {
 			$(this).addClass('active');
 		});
 	}
+
+	var subMenu = $('#submenu'),
+		subMenuList = $('[data-submenu]'),
+		subMenuLabel,
+		subMenuAnchor;
+	for(var i = 0; i < subMenuList.length; i++) {
+		subMenuLabel = $(subMenuList[i]).data('submenu');
+		subMenuAnchor = $(subMenuList[i]).attr('id');
+		$(subMenu).append('<li class="submenu-item"><a class="submenu-anchor" href="#' + subMenuAnchor + '">' + subMenuLabel + '</a></li>');
+	}
+
+	$('.submenu-anchor').click(function() {
+		$('li.submenu-item.active').removeClass('active');
+		$(this).parent().addClass('active');
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      		var target = $(this.hash);
+      		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      		if (target.length) {
+        		$('html,body').animate({
+          		scrollTop: target.offset().top
+        		}, 1000);
+        	return false;
+      		}
+    	}
+	});
+
+
 
 });

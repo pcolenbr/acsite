@@ -46,7 +46,9 @@
 					</section>
 
 					<section id="post-content">
-						<?php the_content(); ?>
+						<div id="text">
+							<?php the_content(); ?>
+						</div>
 
 						<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 						

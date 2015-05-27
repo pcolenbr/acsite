@@ -1,4 +1,4 @@
-<div class="wrap-menu">
+<div id="wrap-menu">
 	<div class="container">			
 		<nav class="navbar navbar-custom navbar-static-top" role="navigation" id="nav">
 			<!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
@@ -15,9 +15,15 @@
 				</a>
 
 				<div class="navbar-collapse collapse" id="nav-bar" aria-expanded="false">
-					<ul class="nav navbar-nav navbar-right">
+
+					<ul id="main-menu" class="nav-overwrited navbar-nav navbar-right">
 						<?php wp_nav_menu(array( 'container' => false, 'items_wrap' => '%3$s' )); ?>
+
+						<hr id="menu-underline"></hr>
+
+						<ul id="submenu" class="nav-overwrited navbar-nav"></ul>
 					</ul>
+
 				</div>
 			</div>	
 		</nav>

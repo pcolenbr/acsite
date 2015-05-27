@@ -5,21 +5,24 @@
 	<hr class="border-title"></hr>
 
 	<h3 class="subtitle">
-		<p>&ldquo;I don&rsquo;t see Avenue Code as a mere vendor that provides us with on-demand service. They are our partner.<br />They engage in our conversations. They understand our concerns. They really care about our success.&rdquo;<br />-- SVP of a Fortune 50 Retailer</p>
+		<?php if($currentlang=="en") { ?>
+			<p>"I don't see Avenue Code as a mere vendor that provides us with on-demand service. They are our partner.<br />They engage in our conversations. They understand our concerns. They really care about our success."<br />-- SVP of a Fortune 50 Retailer</p>
+		<?php } elseif($currentlang=="pt") { ?>
+			<p>“Não vemos a Avenue Code como um mero fornecedor que entrega serviços sob demanda. Eles são nossos parceiros.<br />Eles participam de nossas conversas e entendem nossas preocupações. Eles realmente se importam com nosso sucesso”<br />-- SVP de um Varejista na Fortune 50</p>
+		<?php } ?>
 	</h3>
 
 	<nav id="clients-partners-filters">
 		<ul>
 			<?php if($currentlang=="en") { ?>
-			<li class="active"><a href="#" data-filter-value="*">ALL</a></li>
-			<li><a href="#" data-filter-value=".partner">PARTNER</a></li>
-			<li><a href="#" data-filter-value=".client">CLIENT</a></li>	
+				<li class="active"><a href="#" data-filter-value="*">ALL</a></li>
+				<li><a href="#" data-filter-value=".partner">PARTNER</a></li>
+				<li><a href="#" data-filter-value=".client">CLIENT</a></li>	
 			<?php } elseif($currentlang=="pt") { ?>
-			<li class="active"><a href="#" data-filter-value="*">TODOS</a></li>
-			<li><a href="#" data-filter-value=".partner">PARCEIROS</a></li>
-			<li><a href="#" data-filter-value=".client">CLIENTES</a></li>						
+				<li class="active"><a href="#" data-filter-value="*">TODOS</a></li>
+				<li><a href="#" data-filter-value=".partner">PARCEIROS</a></li>
+				<li><a href="#" data-filter-value=".client">CLIENTES</a></li>						
 			<?php } ?>
-
 		</ul>
 	</nav>
 
