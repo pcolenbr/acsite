@@ -71,6 +71,10 @@ jQuery(function($) {
     	}
 	});
 
+	$('#wrap-menu').on('affix.bs.affix', function () {
+    	$('body').css('margin-top', $('#wrap-menu').height());
+	});
+
 	$('#wrap-menu').affix({
 		offset: {
 			top: $('#header-carousel').height()
