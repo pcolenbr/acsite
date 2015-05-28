@@ -72,7 +72,7 @@
 			</div>
 		</section>
 
-		<section id="leadership" data-submenu="<?php echo ($currentlang == 'en')? 'leadership' :  ($currentlang == 'pt')? 'liderança' : '' ?>">
+		<section id="leadership" data-submenu="<?php echo ($currentlang == 'en')? 'leadership' :  (($currentlang == 'pt')? 'liderança' : '') ?>">
 			<div class="container" id="external-leadership-container">
 				<div id="internal-leadership-container">
 					<?php if($currentlang=="en") { ?>
@@ -130,7 +130,7 @@
 			<img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/leadership_photo.jpg" alt="Amir and Zeo" id="leadership_img">
 		</section>
 
-		<section id="team" data-submenu="<?php echo ($currentlang == 'en')? 'team' :  ($currentlang == 'pt')? 'time' : '' ?>">
+		<section id="team" data-submenu="<?php echo ($currentlang == 'en')? 'team' :  (($currentlang == 'pt')? 'time' : '') ?>">
 			<?php
 				$bios = get_post_meta( $post->ID, 'about_team', true );
 				$usaBios = array();
@@ -239,7 +239,7 @@
 			</div>
 		</section>
 
-		<section id="beginning" data-submenu="<?php echo ($currentlang == 'en')? 'company' :  ($currentlang == 'pt')? 'companhia' : '' ?>">
+		<section id="beginning" data-submenu="<?php echo ($currentlang == 'en')? 'company' :  (($currentlang == 'pt')? 'companhia' : '') ?>">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-6">
@@ -302,7 +302,7 @@
 			</div>
 		</section>
 
-		<section id="events" data-submenu="<?php echo ($currentlang == 'en')? 'events' :  ($currentlang == 'pt')? 'eventos' : '' ?>">
+		<section id="events" data-submenu="<?php echo ($currentlang == 'en')? 'events' :  (($currentlang == 'pt')? 'eventos' : '') ?>">
 			<?php 
 				$args = array('post_type' => 'event', 'posts_per_page' => 1,);
 				$event = get_posts($args);

@@ -1,5 +1,9 @@
 #wrap-menu {
   background: #0b86a0; }
+  #wrap-menu.affix {
+    z-index: 999;
+    width: 100%;
+    top: 0; }
   #wrap-menu .navbar {
     margin: 0px; }
     #wrap-menu .navbar .navbar-brand {

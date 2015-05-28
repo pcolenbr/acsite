@@ -3,6 +3,12 @@
 #wrap-menu {
 	background: $base_color;
 
+	&.affix {
+		z-index: 999;
+		width: 100%;
+		top: 0;
+	}
+
 	.navbar {
 		margin: 0px;
 

@@ -121,7 +121,7 @@ h3.subtitle {
   position: absolute;
   right: 21px;
   bottom: 3px;
-  z-index: 99999; }
+  z-index: 555; }
 
 .num-blue, .btn-blue, .btn-blue:hover, .btn-blue:after {
   background-color: #15639E; }

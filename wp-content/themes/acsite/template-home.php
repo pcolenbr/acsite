@@ -57,7 +57,7 @@
 			<?php } ?>
 		</section>
 
-		<section class="container" id="services-menu" data-submenu="<?php echo ($currentlang == 'en')? 'services' :  ($currentlang == 'pt')? 'serviços' : '' ?>">
+		<section class="container" id="services-menu" data-submenu="<?php echo ($currentlang == 'en')? 'services' :  (($currentlang == 'pt')? 'serviços' : '') ?>">
 			<?php if($currentlang == "en") { ?>
 				<h1 class="title">SERVICES</h1>
 			<?php } elseif($currentlang == "pt") { ?>
@@ -70,7 +70,7 @@
 			</div>
 		</section>
 
-		<section id="home-portfolio" data-submenu="<?php echo ($currentlang == 'en')? 'portfolio' :  ($currentlang == 'pt')? 'portfólio' : '' ?>">
+		<section id="home-portfolio" data-submenu="<?php echo ($currentlang == 'en')? 'portfolio' :  (($currentlang == 'pt')? 'portfólio' : '') ?>">
 			<?php get_template_part('clients-partners-isotopes'); ?>
 		</section>
 

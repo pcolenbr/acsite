@@ -1,3 +1,4 @@
+<?php $currentlang = pll_current_language(); ?>
 <div id="wrap-menu">
 	<div class="container">			
 		<nav class="navbar navbar-custom navbar-static-top" role="navigation" id="nav">
@@ -17,7 +18,11 @@
 				<div class="navbar-collapse collapse" id="nav-bar" aria-expanded="false">
 
 					<ul id="main-menu" class="nav-overwrited navbar-nav navbar-right">
-						<?php wp_nav_menu(array( 'container' => false, 'items_wrap' => '%3$s' )); ?>
+						<?php if($currentlang=="en") { ?>
+							<?php wp_nav_menu(array( 'menu' => 'menu_en', 'container' => false, 'items_wrap' => '%3$s' )); ?>
+						<?php } elseif($currentlang=="pt") { ?>
+							<?php wp_nav_menu(array( 'menu' => 'menu_pt', 'container' => false, 'items_wrap' => '%3$s' )); ?>
+						<?php } ?>
 
 						<hr id="menu-underline"></hr>
 

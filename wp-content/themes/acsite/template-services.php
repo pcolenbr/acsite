@@ -12,7 +12,7 @@
 			<?php get_template_part('menu'); ?>
 		</header>
 
-		<section id="top" data-submenu="services">
+		<section id="top" data-submenu="<?php echo ($currentlang == 'en')? 'services' :  (($currentlang == 'pt')? 'serviços' : '') ?>">
 			<div class="container">
 				<?php if($currentlang=="en") { ?>
 					<h1 class="title">SERVICES</h1>
@@ -29,7 +29,7 @@
 			<?php get_template_part('clients-partners-isotopes'); ?>
 		</section>
 
-		<section id="multimidias" data-submenu="multimedia">
+		<section id="multimidias" data-submenu="<?php echo ($currentlang == 'en')? 'multimedia' :  (($currentlang == 'pt')? 'multimídia' : '') ?>">
 			<?php 
 				$args = array('post_type' => 'multimedia', 'posts_per_page' => 15);
 				$multimedias = get_posts($args);

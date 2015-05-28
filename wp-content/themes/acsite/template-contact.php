@@ -58,7 +58,7 @@
 			<iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.866917500437!2d-122.40253129999998!3d37.793158499999976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a698fd8eb%3A0xcfad419c0e900b47!2s400+Montgomery+St+%23305!5e0!3m2!1sen!2s!4v1400803033706" id="mapFrame"></iframe>
 		</section>
 
-		<section id="form" data-submenu="<?php echo ($currentlang == 'en')? 'get in touch' :  ($currentlang == 'pt')? 'entre em contato' : '' ?>">
+		<section id="form" data-submenu="<?php echo ($currentlang == 'en')? 'get in touch' :  (($currentlang == 'pt')? 'entre em contato' : '') ?>">
 			<div class="container">
 				<?php if($currentlang=="en") { ?>
 					<a class="btn btn-blue">CLICK TO ACTIVATE</a>

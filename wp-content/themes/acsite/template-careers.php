@@ -12,7 +12,7 @@
 			<?php get_template_part('menu'); ?>
 		</header>
 
-		<section id="want-to-join" data-submenu="<?php echo ($currentlang == 'en')? 'want to join the team?' :  ($currentlang == 'pt')? 'deseja fazer parte do nosso time?' : '' ?>">
+		<section id="want-to-join" data-submenu="<?php echo ($currentlang == 'en')? 'want to join the team?' :  (($currentlang == 'pt')? 'deseja fazer parte do nosso time?' : '') ?>">
 			<div class="container">
 				<h1 class="title">WANT TO JOIN THE TEAM?</h1>
 
@@ -62,7 +62,7 @@
 
 		<?php $main_new = get_post_meta( $post->ID, 'career_main_new', true ); ?>
 		<?php if(!empty($main_new)) { ?>
-			<section id="main-new" data-submenu="<?php echo ($currentlang == 'en')? 'training program' :  ($currentlang == 'pt')? 'programa de treinamento' : '' ?>">
+			<section id="main-new" data-submenu="<?php echo ($currentlang == 'en')? 'training program' :  (($currentlang == 'pt')? 'programa de treinamento' : '') ?>">
 				<?php
 					$bg_img_src = "";
 					if(!empty($main_new[0]['background-image'])) {
@@ -102,7 +102,7 @@
 			</section>
 		<?php } ?>
 
-		<section id="open-positions" data-submenu="<?php echo ($currentlang == 'en')? 'open positions' :  ($currentlang == 'pt')? 'vagas disponíveis' : '' ?>">
+		<section id="open-positions" data-submenu="<?php echo ($currentlang == 'en')? 'open positions' :  (($currentlang == 'pt')? 'vagas disponíveis' : '') ?>">
 			<div class="container">
 				<h1 class="title">OPEN POSITIONS</h1>
 				<hr class="border-title"></hr>
@@ -141,7 +141,7 @@
 			$working_at_items = get_post_meta( $post->ID, 'careers_working_at_ac', true );
 			if(!empty($working_at_items)) {
 		?>
-		<section id="working-at-ac" data-submenu="<?php echo ($currentlang == 'en')? 'working at avenue code' :  ($currentlang == 'pt')? 'trabalhando na avenue code' : '' ?>">
+		<section id="working-at-ac" data-submenu="<?php echo ($currentlang == 'en')? 'working at avenue code' :  (($currentlang == 'pt')? 'trabalhando na avenue code' : '') ?>">
 			<div class="container">
 				<?php if($currentlang=="en") { ?>
 					<h1 class="title">WORKING AT AVENUE CODE</h1>
