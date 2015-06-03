@@ -160,6 +160,12 @@ module.exports = function (grunt) {
 					'notify:scss'
 				]
 			}
+		},
+
+		githooks: {
+			all: {
+				'pre-commit': 'jshint',
+			}
 		}
 	});
 
