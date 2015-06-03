@@ -23,15 +23,35 @@ module.exports = function (grunt) {
 		  all: {
 			src: [
 			  'Gruntfile.js',
-			  'scripts/src/*/*.js'
+			  'scripts/src/**/*.js'
 			]
 		  }
+		},
+
+		// Check JS programming patterns
+		jscs: {
+		  options: {
+			config: true,
+			fix: true,
+		  },
+		  all: {
+			src: [
+			  'scripts/src/**/*.js'
+			]
+		  }
+		},
+
+		// Clean project to deploy
+		clean: {
+			all: {
+				src: ['scripts/src']
+			}
 		},
 		
 		// Concat and minify our JS
 		uglify: {
 			options: {
-				banner: '/* <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */\n',
+				banner: '/*\nAvenue Code \n<%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n*/\n',
 				mangle: false
 			},
 			dist: {
@@ -58,9 +78,6 @@ module.exports = function (grunt) {
 		
 		// Mimify css
 		cssmin: {
-			options: {
-				banner: '/* <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			},
 			dist: {
 				files: [{
 					expand: true,
@@ -81,7 +98,7 @@ module.exports = function (grunt) {
 		notify_hooks: {
 			options: {
 				enabled: true,
-				max_js_hint_notifications: 5,
+				max_js_hint_notifications: 50,
 				title: 'Notifications'
 			}
 		},
@@ -111,8 +128,9 @@ module.exports = function (grunt) {
 		  js: {
 			files: ['scripts/src/**/*.js'],
 			tasks: [
-				'jshint:all', 
-				'uglify',
+				'jshint:all',
+				'jscs:all', 
+				'uglify:dist',
 				'notify:js'
 			]
 		  },
@@ -120,7 +138,7 @@ module.exports = function (grunt) {
 				files: ['sass/**/*.scss'],
 				tasks: [
 					'sass:dev',
-					'cssmin',
+					'cssmin:dist',
 					'concat_css',
 					'notify:scss'
 				]
@@ -128,12 +146,17 @@ module.exports = function (grunt) {
 		}
 	});
 
-	// Development task
+	// Default task
 	grunt.registerTask('default', [
-		'coffee:all',
+		'jshint:all',
+		'jscs:all',
 		'uglify',
+		'uglify:dist',
+		'notify:js',
 		'sass:dev',
-		'cssmin'
+		'cssmin:dist',
+		'concat_css',
+		'notify:scss'
 	]);
 	
 	// Production task
