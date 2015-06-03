@@ -43,8 +43,25 @@ module.exports = function (grunt) {
 
 		// Clean project to deploy
 		clean: {
-			all: {
-				src: ['scripts/src']
+			options: {
+      			force: true
+    		},
+			dist: {
+				src: ['../acsite-production']
+			}
+		},
+
+		// Copy files to deploy
+		copy: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						src: ['**/*', '!.sass-cache', '!sass/**/*', '!node_modules/**/*', '!scripts/src/**/*', '!styles/src/**/*', '!gruntfile.js', '!*.jshintrc', '!*.jscsrc'],
+						dest: '../acsite-production/',
+						filter: 'isFile'
+					}
+				]
 			}
 		},
 		
@@ -159,15 +176,20 @@ module.exports = function (grunt) {
 		'notify:scss'
 	]);
 	
-	// Production task
-	grunt.registerTask('dist', function() {
+	// Deploy task
+	grunt.registerTask('deploy', function() {
 		grunt.task.run([
-			'clean:dist',
+			'jshint:all',
+			'jscs:all',
 			'uglify',
-			'sass:prod',
-			'cssmin',
+			'uglify:dist',
+			'notify:js',
+			'sass:dev',
 			'cssmin:dist',
-			'notify:dist'
+			'concat_css',
+			'notify:scss',
+			'clean:dist',
+			'copy:dist'
 		]);
 	});
 
