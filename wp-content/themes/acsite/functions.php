@@ -193,4 +193,165 @@ function ac_contact_send_email() {
 	exit;
 }
 
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_filter( 'add_to_cart_text', 'woo_custom_cart_button_text' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
+function woo_custom_cart_button_text() {
+	return __( 'REGISTER', 'woocommerce' ); 
+}
+
+// Remove Woocommer from pages that it is not used
+// Remove Woocommerce scripts on unnecessary pages
+function woocommerce_de_script() {
+    if (function_exists( 'is_woocommerce' )) {
+    	if (!is_woocommerce() && !is_cart() && !is_checkout() && !is_account_page()) {
+    		wp_dequeue_script('wc-add-to-cart');
+    		wp_dequeue_script('jquery-blockui');
+    		wp_dequeue_script('jquery-placeholder');
+    		wp_dequeue_script('woocommerce');
+    		wp_dequeue_script('jquery-cookie');
+    		wp_dequeue_script('wc-cart-fragments');
+     	}
+    }
+}
+add_action( 'wp_print_scripts', 'woocommerce_de_script', 100 );
+
+add_action( 'wp_enqueue_scripts', 'remove_woocommerce_generator', 99 );
+function remove_woocommerce_generator() {
+    if (function_exists( 'is_woocommerce' )) {
+		if (!is_woocommerce()) {
+			remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
+		}
+    }
+}
+
+function child_manage_woocommerce_css(){
+    if (function_exists( 'is_woocommerce' )) {
+		if (!is_woocommerce()) {
+			wp_dequeue_style('woocommerce-layout');
+			wp_dequeue_style('woocommerce-smallscreen');
+			wp_dequeue_style('woocommerce-general');
+		}
+    }
+}
+add_action( 'wp_enqueue_scripts', 'child_manage_woocommerce_css' );
+
+// CUSTOM FIELDS FOR CHECKOUT PAGE
+add_filter('woocommerce_enable_order_notes_field', '__return_false');
+add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
+function my_custom_checkout_field( $checkout ) {
+	global $woocommerce;
+
+    $num_of_courses = $woocommerce->cart->cart_contents_count;
+ 
+    echo '<div id="my_custom_checkout_field"><h3 style="margin-bottom:53px;">' . __('Registration Details') . '</h3>';
+    
+    for ($i = 0; $i < $num_of_courses; $i++) {
+		echo '<div class="regist_form">';
+
+      	echo '<h4><b>Student #' .($i + 1).'</b></h4>';
+
+      	woocommerce_form_field( 'Registration_First_Name'.$i, array(
+        	'type'          => 'text',
+        	'class'         => array('my-field-class form-row-first'),
+        	'label'         => __('First Name'),
+        	'placeholder'   => __(''),
+        	'required'      => true,
+        ), $checkout->get_value( 'Registration_First_Name'.$i ));
+
+    	woocommerce_form_field( 'Registration_Last_Name'.$i, array(
+        	'type'          => 'text',
+        	'class'         => array('my-field-class form-row-last'),
+        	'label'         => __('Last Name'),
+        	'placeholder'   => __(''),
+        	'required'      => true,
+        ), $checkout->get_value( 'Registration_Last_Name'.$i ));
+
+    	woocommerce_form_field( 'Registration_email'.$i, array(
+	        'type'          => 'text',
+        	'class'         => array('my-field-class form-row-first validate-email'),
+        	'label'         => __('Email Address'),
+        	'placeholder'   => __(''),
+        	'required'      => true,
+        ), $checkout->get_value( 'Registration_email'.$i ));
+
+    	woocommerce_form_field( 'Registration_phone'.$i, array(
+        	'type'          => 'text',
+        	'class'         => array('my-field-class form-row-last'),
+        	'label'         => __('Phone'),
+        	'placeholder'   => __(''),
+        ), $checkout->get_value( 'Registration_phone'.$i ));
+
+    	echo '</div>';
+    }    
+    echo '</div>';
+}
+
+add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
+function my_custom_checkout_field_process() {
+  	global $woocommerce;
+
+  	$num_of_courses = $woocommerce->cart->cart_contents_count;
+
+  	for($i = 0; $i < $num_of_courses; $i++){
+      	if ( ! $_POST['Registration_First_Name'.$i] ) {
+        	wc_add_notice( __( '<b>Student #'.($i+1).' First Name</b> is a required field.'), 'error' );
+      	}
+      	if ( ! $_POST['Registration_Last_Name'.$i] ) {
+        	wc_add_notice( __( '<b>Student #'.($i+1).' Last Name</b> is a required field.'), 'error' );
+      	}
+      	if ( ! $_POST['Registration_email'.$i] ) {
+			wc_add_notice( __( '<b>Student #'.($i+1).' Email Address</b> is a required field.'), 'error' );
+      	}
+    }
+}
+
+  /**
+ * Update the order meta with field value
+ */
+add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
+function my_custom_checkout_field_update_order_meta( $order_id ) {
+    global $woocommerce;
+
+    $num_of_courses = $woocommerce->cart->cart_contents_count;
+
+    for($i = 0; $i < $num_of_courses; $i++){
+    	if ( ! empty( $_POST['Registration_First_Name'.$i] ) ) {
+        	update_post_meta( $order_id, 'Student #'.($i+1).' First Name', sanitize_text_field( $_POST['Registration_First_Name'.$i] ) );
+        }
+        if ( ! empty( $_POST['Registration_Last_Name'.$i] ) ) {
+          	update_post_meta( $order_id, 'Student #'.($i+1).' Last Name', sanitize_text_field( $_POST['Registration_Last_Name'.$i] ) );
+        }
+        if ( ! empty( $_POST['Registration_email'.$i] ) ) {
+          	update_post_meta( $order_id, 'Student #'.($i+1).' Email', sanitize_text_field( $_POST['Registration_email'.$i] ) );
+        }
+        if ( ! empty( $_POST['Registration_phone'.$i] ) ) {
+          	update_post_meta( $order_id, 'Student #'.($i+1).' Phone', sanitize_text_field( $_POST['Registration_phone'.$i] ) );
+        }
+    }
+}
+
+
+/**
+ * Display field value on the order edit page
+ */
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 ); 
+function my_custom_checkout_field_display_admin_order_meta($order){
+	global $woocommerce;
+
+    $num_of_courses = $woocommerce->cart->cart_contents_count;
+
+    for($i = 0; $i < $order->get_item_count(); $i++){
+		echo '<hr><h4><b>Student #'.($i +1).':</b></h4>';
+      	echo '<p><strong>'.__('First Name').':</strong> ' . get_post_meta( $order->id, 'Student #'.($i +1).' First Name', true ) . '</p>';
+      	echo '<p><strong>'.__('Last Name').':</strong> ' . get_post_meta( $order->id, 'Student #'.($i +1).' Last Name', true ) . '</p>';
+      	echo '<p><strong>'.__('Email').':</strong> ' . get_post_meta( $order->id, 'Student #'.($i +1).' Email', true ) . '</p>';
+      	echo '<p><strong>'.__('Phone').':</strong> ' . get_post_meta( $order->id, 'Student #'.($i +1).' Phone', true ) . '</p>';
+    }      
+}
+
 ?>

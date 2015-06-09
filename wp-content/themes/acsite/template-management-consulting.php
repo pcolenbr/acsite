@@ -68,7 +68,7 @@
 	        	$div_id = strtolower(str_replace(' ', '-', $management_consulting_item["link-title"]));
 	        ?>
 				<div class="row" id="<?php echo $div_id; ?>">
-					<div class="col-md-4 image-div">                
+					<div class="col-md-4 image-div">
 			        	<?php $src_management_consulting_img = wp_get_attachment_image_src( $management_consulting_item['image'], 'full' ); ?>
 			            <img class="img-responsive" src= <?php echo $src_management_consulting_img[0]; ?> alt="">
 	                </div>

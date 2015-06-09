@@ -47,6 +47,7 @@
 }
 
 .service-title {
+	margin-top: 50px;
 	.border-title {
 		margin-bottom: 20px;
 	}
@@ -134,6 +135,29 @@
 		}
 		h3 {
 			margin-top: 0px;	
+		}
+	}
+}
+
+#wrap-avenue-code-academy {
+	#trainings {
+		text-align: center;
+		margin-top: 50px;
+
+		.row {
+			margin-bottom: 40px;
+			text-align: left;
+			&:nth-child(even) {
+				.image-div {
+					float: right;
+				}
+			}
+		}
+
+		.training-title {
+			font-weight: bold;
+			font-size: 30px;
+			letter-spacing: 1px;
 		}
 	}
 }

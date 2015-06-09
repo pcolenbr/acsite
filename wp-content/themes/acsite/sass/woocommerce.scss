@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt {
+	background: $base_color !important;
+	padding: 8px 30px;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}

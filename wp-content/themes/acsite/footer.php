@@ -12,31 +12,30 @@ $youtube_url = get_information('youtube_us');
 $flickr_url = get_information('flickr_us');
 
 if($currentlang == "br") {
-	if ( !empty(get_information('facebook_br')) ) {
+	if ( get_information('facebook_br') != false ) {
 		$fb_url = get_information('facebook_br');
 	}
 
-	if ( !empty(get_information('twitter_br')) ) {
+	if ( get_information('twitter_br') != false ) {
 		$twitter_url = get_information('twitter_br');
 	}
 
-	if ( !empty(get_information('googleplus_br')) ) {
+	if ( get_information('googleplus_br') != false ) {
 		$gplus_url = get_information('googleplus_br');
 	}
 
-	if ( !empty(get_information('linkedin_br')) ) {
+	if ( get_information('linkedin_br') != false ) {
 		$linkedin_url = get_information('linkedin_br');
 	}
 
-	if ( !empty(get_information('youtube_br')) ) {
+	if ( get_information('youtube_br') != false ) {
 		$youtube_url = get_information('youtube_br');
 	}
 
-	if ( !empty(get_information('flickr_br')) ) {
+	if ( get_information('flickr_br') != false ) {
 		$flickr_url = get_information('flickr_br');
 	}
 }
-
 ?>
 
 <footer>

@@ -9,22 +9,24 @@ jQuery(function($) {
     var clientsPartnersContainer = $('#clients-partners-isotopes');
 
     if (clientsPartnersContainer) {
-        clientsPartnersContainer.isotope({
-            itemSelector: '.clients-partners-item',
-            layoutMode: 'fitRows'
-        });
-
-        // Filter items on button click
-        $('#clients-partners-filters').on('click', 'a', function (event) {
-            event.preventDefault();
-            var filterValue = $(this).attr('data-filter-value');
-
+        clientsPartnersContainer.imagesLoaded(function() {
             clientsPartnersContainer.isotope({
-                filter: filterValue
+                itemSelector: '.clients-partners-item',
+                layoutMode: 'fitRows'
             });
-            // Active class
-            $('#clients-partners-filters li').removeClass();
-            $(this).parent().addClass('active');
+
+            // Filter items on button click
+            $('#clients-partners-filters').on('click', 'a', function (event) {
+                event.preventDefault();
+                var filterValue = $(this).attr('data-filter-value');
+
+                clientsPartnersContainer.isotope({
+                    filter: filterValue
+                });
+                // Active class
+                $('#clients-partners-filters li').removeClass();
+                $(this).parent().addClass('active');
+            });
         });
     }
 
@@ -75,6 +77,10 @@ jQuery(function($) {
                 return false;
             }
         }
+    });
+
+    $('#wrap-menu').on('affixed-top.bs.affix', function () {
+        $('body').css('margin-top', '0px');
     });
 
     $('#wrap-menu').on('affix.bs.affix', function () {
