@@ -1,0 +1,29 @@
+#wrap-events {
+	text-align: center;
+	.border-title {
+		margin: 15px auto;
+	}
+
+	.events {
+
+		.category-title {
+			margin: 40px;
+		}
+
+		.hexagon-events {
+			.hexagon-mask {
+				float: left;
+			}
+		}
+
+		.event-title {
+			font-weight: bold;
+			font-size: 20px;
+
+		}
+
+		.event-posts {
+			text-align: left;
+		}
+	}
+}
