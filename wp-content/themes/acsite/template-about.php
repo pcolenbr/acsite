@@ -13,7 +13,11 @@
 		</header>
 
 		<!-- This part comes from the home page -->
-		<?php $home_page = get_page_by_title("home");?>
+		<?php if($currentlang=="en") { ?>
+			<?php $home_page = get_page_by_path('/home');?>
+		<?php } elseif($currentlang=="pt") { ?>
+			<?php $home_page = get_page_by_path('/inicio');?>
+		<?php } ?>
 		<?php $ac_section = get_post_meta( $home_page->ID, 'home-avenuecodesection', true ); ?>
 		<section class="container" id="what-we-do" data-submenu="avenue code">
 			<?php if(!empty($ac_section[0]['title'])) { ?>
