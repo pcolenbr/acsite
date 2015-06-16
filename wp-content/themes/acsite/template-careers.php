@@ -27,13 +27,13 @@
 							<?php if($currentlang=="en") { ?>
 								<h4 class="want-to-join-title">TECH</h4>
 								<p class="want-to-join-description">Do you own multiple superhero t-shirts? Do you spend more of your time looking at screens than the real world? Do people tell you that you are a bit of a geek? Well, even if you aren't, but you are a hardcore developer, engineer, or Agile coach, etc., you should check out our open positions.</p>
-								<a class="btn btn-blue want-to-join-btn" href="<?php get_permalink(); ?>">OPEN POSITIONS (United States)</a>
+								<a class="btn btn-blue want-to-join-btn" href="<?php echo get_permalink(); ?>#open-positions">OPEN POSITIONS (United States)</a>
 								<br>
-								<a class="btn btn-blue want-to-join-btn" href="http://www.jobs.net/jobs/avenuecode/en-us/">OPEN POSITIONS (Brazil)</a>
+								<a class="btn btn-blue want-to-join-btn" href="http://www.jobs.net/jobs/avenuecode/en-us/search/?keyword=&amp;location=Brazil">OPEN POSITIONS (Brazil)</a>
 							<?php } elseif($currentlang=="pt") { ?>
 								<h4 class="want-to-join-title">TECNOLOGIA</h4>
 								<p class="want-to-join-description">Você possui várias camisetas de super-herói? Você passa a maior parte do seu tempo olhando para telas do que no mundo real? As pessoas dizem que você é meio nerd? Bem, mesmo que você não seja, mas você é um ótimo desenvolvedor, engenheiro ou instrutor de Agile e etc, você deveria dar uma olhada em nossas vagas disponíveis.</p>
-								<a class="btn btn-blue want-to-join-btn" href="http://www.jobs.net/jobs/avenuecode/en-us/">VAGAS DISPONÍVEIS</a>
+								<a class="btn btn-blue want-to-join-btn" href="http://www.jobs.net/jobs/avenuecode/en-us/search/?keyword=&amp;location=Brazil">VAGAS DISPONÍVEIS</a>
 							<?php } ?>
 						</div>
 					</div>
