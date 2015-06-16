@@ -324,8 +324,16 @@
 				<div class="content">
 					<?php if (!empty($event)) { ?>
 						<?php $events_att = get_post_meta( $event[0]->ID, 'events_attributes', true); ?>
-						<h3 class="post_title"><?php echo $event[0]->post_title ?></h3>
-						<div class="details"><?php echo $events_att[0]['date'] .'<br>'. $events_att[0]['local']; ?></div>	
+						<?php if ($events_att[0]['show'] === "True") { ?>
+							<h3 class="post_title"><?php echo $event[0]->post_title ?></h3>
+							<div class="details"><?php echo $events_att[0]['date'] .'<br>'. $events_att[0]['local']; ?></div>	
+						<?php } else { ?>
+							<?php if($currentlang=="en") { ?>
+								<h3 class="empty_array">No Upcoming Events</h3>
+							<?php } elseif($currentlang=="pt") { ?>
+								<h3 class="empty_array">Nenhum evento marcado</h3>
+							<?php } ?>
+						<?php } ?>		
 					<?php } else { ?>
 						<?php if($currentlang=="en") { ?>
 							<h3 class="empty_array">No Upcoming Events</h3>
