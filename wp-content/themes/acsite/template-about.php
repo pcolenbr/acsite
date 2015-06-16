@@ -320,12 +320,12 @@
 				<?php } ?>
 
 				<hr class="border-title"></hr>
-
+				
 				<div class="content">
 					<?php if (!empty($event)) { ?>
 						<?php $events_att = get_post_meta( $event[0]->ID, 'events_attributes', true); ?>
 						<h3 class="post_title"><?php echo $event[0]->post_title ?></h3>
-						<div class="details"><?php echo $events_att[0]['event-date'] .'<br>'. $events_att[0]['event-local']; ?></div>	
+						<div class="details"><?php echo $events_att[0]['date'] .'<br>'. $events_att[0]['local']; ?></div>	
 					<?php } else { ?>
 						<?php if($currentlang=="en") { ?>
 							<h3 class="empty_array">No Upcoming Events</h3>
