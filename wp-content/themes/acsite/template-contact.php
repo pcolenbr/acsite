@@ -61,10 +61,8 @@
 		<section id="form" data-submenu="<?php echo ($currentlang == 'en')? 'get in touch' :  (($currentlang == 'pt')? 'entre em contato' : '') ?>">
 			<div class="container">
 				<?php if($currentlang=="en") { ?>
-					<a class="btn btn-blue">CLICK TO ACTIVATE</a>
 					<h2 id="form-title">Get in Touch with Us</h2>
 				<?php } elseif($currentlang=="pt") { ?>
-					<a class="btn btn-blue">CLIQUE PARA ATIVAR</a>
 					<h2 id="form-title">Entre em Contato com a Gente</h2>
 				<?php } ?>
 
