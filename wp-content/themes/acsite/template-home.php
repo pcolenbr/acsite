@@ -15,11 +15,11 @@
 					<?php if($currentlang=="en") { ?>
 						<h1>SOFTWARE INNOVATION IS A JOURNEY</h1>
 						
-						<p>Let us be your guide. Delivering the world's largest ebusiness solutions</p>
+						<p>Let us be your guide. Delivering the world's largest e-business solutions.</p>
 					<?php } elseif($currentlang=="pt") { ?>
 						<h1>INOVAÇÃO EM SOFTWARE É UMA JORNADA</h1>
 						
-						<p>Entregando as maiores soluções em e-business do mundo através de um desenvolvimento superior</p>
+						<p>Entregando as maiores soluções em e-business do mundo através de um desenvolvimento superior.</p>
 					<?php } ?>
 				</div>
 			</div>
