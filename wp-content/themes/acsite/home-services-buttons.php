@@ -95,12 +95,12 @@ if($currentlang=="en"):?>
             <div class="hexagon-mask">
                 <span class="num num-grey">3</span>
                 <span class="mask"></span>
-                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Profissionais de Engenharia e Agile' ) ) ); ?>"><span class="mask-bg"></span></a>
+                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Profissionais de Engenharia e Metodologia Ágil' ) ) ); ?>"><span class="mask-bg"></span></a>
                 <img src="<?php bloginfo('template_directory'); ?>/images/airplane.jpg" alt="">
             </div>
             <h3>PROFISSIONAIS DE<br>ENGENHARIA E AGILE</h3>
             <p>Nossas pessoas são experts</p>
-            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Profissionais de Engenharia e Agile' ) ) ); ?>" class="btn btn-grey">Detalhes</a>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Profissionais de Engenharia e Metodologia Ágil' ) ) ); ?>" class="btn btn-grey">Detalhes</a>
         </div>
     </div>
 
