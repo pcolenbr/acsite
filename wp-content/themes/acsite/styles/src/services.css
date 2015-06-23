@@ -47,7 +47,8 @@
   width: 100%;
   padding: 0px 50px; }
   .service-onpage-menu ul li {
-    display: table-cell; }
+    display: table-cell;
+    padding: 0px 10px; }
     .service-onpage-menu ul li a {
       color: #0b86a0; }
       .service-onpage-menu ul li a:hover {
