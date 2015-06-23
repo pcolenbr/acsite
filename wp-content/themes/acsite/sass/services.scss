@@ -51,7 +51,7 @@
 	.border-title {
 		margin-bottom: 20px;
 	}
-
+    
 	.div-title {
 		text-align: center;
 
@@ -80,6 +80,7 @@
   		padding: 0px 50px;
 		li {
 			display: table-cell;
+            padding: 0px 10px; 
 			a {
 				color: $base_color;
 				&:hover {
