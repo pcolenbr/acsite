@@ -44,7 +44,7 @@
 			</div>
 		</section>
 
-		<section id="gmap" data-submenu="<?php echo ($currentlang == 'en')? 'map' :  ($currentlang == 'pt')? 'mapa' : '' ?>">
+		<section id="gmap" data-submenu="<?php echo ($currentlang == 'en')? 'map' :  (($currentlang == 'pt')? 'mapa' : '') ?>">
 			<div id="gmap-overlay">
 				<div id="button-div">
 					<?php if($currentlang=="en") { ?>
