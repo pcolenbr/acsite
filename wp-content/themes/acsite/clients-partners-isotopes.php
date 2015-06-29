@@ -1,6 +1,10 @@
 <?php $currentlang = pll_current_language(); ?>
 <section class="container" id="clients-partners-isotopes-section">		
-	<h1 class="title">CLIENTS & PARTNERS</h1>
+	<?php if($currentlang=="en") { ?>
+		<h1 class="title">CLIENTS & PARTNERS</h1>
+	<?php } elseif($currentlang=="pt") { ?>
+		<h1 class="title">CLIENTES & PARCEIROS</h1>
+	<?php } ?>
 
 	<hr class="border-title"></hr>
 
