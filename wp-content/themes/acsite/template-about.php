@@ -153,9 +153,9 @@
 			<div class="container">				
 				<div id="team_usa">
 					<?php if($currentlang=="en") { ?>
-						<h1 class="title">USA MANAGEMENT TEAM</h1>
+						<h1 class="title">USA TEAM</h1>
 					<?php } elseif($currentlang=="pt") { ?>
-						<h1 class="title">TIME DE GESTÃO NOS EUA</h1>
+						<h1 class="title">TIME EUA</h1>
 					<?php } ?>
 
 					<hr class="border-title"></hr>
@@ -169,9 +169,9 @@
 
 				<div id="team_brazil">
 					<?php if($currentlang=="en") { ?>
-						<h1 class="title">TIME BRASIL</h1>
+						<h1 class="title">BRAZIL TEAM</h1>
 					<?php } elseif($currentlang=="pt") { ?>
-						<h1 class="title">TIME DE GESTÃO NO BRASIL</h1>
+						<h1 class="title">TIME BRASIL</h1>
 					<?php } ?>
 
 					<hr class="border-title"></hr>
