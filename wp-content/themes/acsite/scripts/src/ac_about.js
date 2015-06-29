@@ -8,19 +8,6 @@ jQuery(function($) {
         singleItem: true
     });
 
-    $('#leadership_img').load(function() {
-        var imgH = $('#leadership_img').css('height');
-
-        imgH = Math.round(parseInt(imgH, 10) * 0.7);
-        imgH = imgH + 'px';
-
-        $('#amir_button, #zeo_button').css('height' , imgH);
-        $('.about_box').css('max-height', imgH);
-
-        $('#about_zeo').hide();
-        $('#about_amir').hide();
-    });
-
     $(window).resize(function() {
         var imgH = $('#leadership_img').css('height');
 
@@ -30,6 +17,17 @@ jQuery(function($) {
         $('#amir_button, #zeo_button').css('height' , imgH);
         $('.about_box').css('max-height', imgH);
     });
+
+    var imgH = $('#leadership_img').css('height');
+
+    imgH = Math.round(parseInt(imgH, 10) * 0.7);
+    imgH = imgH + 'px';
+
+    $('#amir_button, #zeo_button').css('height', imgH);
+    $('.about_box').css('max-height', imgH);
+
+    $('#about_zeo').hide();
+    $('#about_amir').hide();
 
     $('#amir_button').mouseenter(function() {
         $('#about_amir').show();
