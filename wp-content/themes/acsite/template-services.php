@@ -25,7 +25,7 @@
 			</div>
 		</section>
 
-		<section id="clients_partners" data-submenu="clients &amp; partners">
+		<section id="clients_partners" data-submenu="<?php echo ($currentlang == 'en')? 'clients &amp; partners' :  (($currentlang == 'pt')? 'clientes &amp; parceiros' : '') ?>">
 			<?php get_template_part('clients-partners-isotopes'); ?>
 		</section>
 
