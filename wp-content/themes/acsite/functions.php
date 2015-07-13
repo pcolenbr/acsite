@@ -44,7 +44,6 @@ function ac_scripts() {
 }
 
 function ac_styles() {
-	
 	wp_register_style('ac_boostrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css');
 	wp_enqueue_style('ac_boostrap');
 
@@ -157,38 +156,7 @@ function create_team($bios) {
 }
 
 function ac_contact_send_email() {
-	$response = json_encode( array( 'success' => false ) );	
-
-	$location = $_POST ['location'];
-	$name = $_POST ['name'];
-	$email = $_POST ['email'];
-	$website = $_POST ['website'];
-	$message = $_POST ['message'];
-
-	if($location == 1 ) {
-		$mail_to = 'info@avenuecode.com';		
-	} else {
-		$mail_to = 'brazil.info@avenuecode.com';
-	}
-
-	$subject = 'Website email submission from '. $location;
-
-	$body_message = 'From: '. $name . "<br>";
-	$body_message .= 'E-mail: ' . $email . "<br>";
-	$body_message .= 'Website: ' . $website . "<br>";
-	$body_message .= 'Message: ' . $message;
-
-	$headers = 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-	$headers .= 'From: ' . $email . "\r\n";
-	$headers .= 'Reply-To: '. $email . "\r\n";
-
-	$status = wp_mail( $mail_to, $subject, $body_message, $headers );
-
-	if($status == true) {
-		$response = json_encode( array( 'success' => true ) );	
-	}
-
-	header( "Content-Type: application/json" );
+	include '../send_email.php';
 	echo $response;
 	exit;
 }
