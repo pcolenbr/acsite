@@ -1,8 +1,6 @@
 jQuery(function($) {
     'use strict';
 
-    var ACAjax;
-
     $('#gmap-overlay').click(function () {
         $('#gmap-overlay').fadeOut('fast');
     });
