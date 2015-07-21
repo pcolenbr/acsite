@@ -4,3 +4,4 @@ wp-content/themes/acsite/styles/*.map
 wp-content/themes/acsite/styles/dist/*.min.css
 wp-content/themes/acsite/scripts/dist/*.min.js
 wp-content/themes/acsite-production/
+wp-content/uploads-production/

@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						src: ['**/*', '!.sass-cache', '!sass/**/*', '!node_modules/**/*', '!scripts/src/**/*', '!styles/src/**/*', '!gruntfile.js', '!*.jshintrc', '!*.jscsrc'],
+						src: ['**/*', '!.sass-cache', '!sass/**/*', '!node_modules/**/*', '!scripts/src/**/*', '!styles/src/**/*', '!images/dev/**/*', '!gruntfile.js', '!*.jshintrc', '!*.jscsrc'],
 						dest: '../acsite-production/',
 						filter: 'isFile'
 					}
@@ -109,6 +109,44 @@ module.exports = function (grunt) {
 		// Concat css files
 		concat_css: {
 			'styles/dist/ac_styles.min.css': ['styles/src/min/**/*.css']
+		},
+
+		// Image optimization
+		imagemin: {
+			theme: {
+				options: {
+					optimizationLevel: 7
+				},
+				files: [{
+					expand: true,
+					cwd: 'images/dev',
+					src: ['**/*.{png,jpg,jpeg,gif}'],
+					dest: 'images'
+				}]
+			},
+			uploads: {
+				files: [{
+					expand: true,
+					cwd: '../../uploads',
+					src: ['**/*.{png,jpg,jpeg,gif}'],
+					dest: '../../uploads-production'
+				}]
+			}
+		},
+
+		// String replacement, so far used to fix image path
+		replace: {
+			dist: {
+			    src: '../acsite-production/**/*.php',
+				overwrite: true,
+				replacements: [{
+					from: '<?php echo get_stylesheet_directory_uri(); ?>/images/dev',
+					to: '<?php echo get_stylesheet_directory_uri(); ?>/images'
+				}, {
+					from: "<?php bloginfo('template_directory'); ?>/images/dev",
+					to: "<?php bloginfo('template_directory'); ?>/images"
+				}]
+			}
 		},
 		
 		// Notify cross-OS
@@ -195,7 +233,8 @@ module.exports = function (grunt) {
 			'concat_css',
 			'notify:scss',
 			'clean:dist',
-			'copy:dist'
+			'copy:dist',
+			'replace:dist'
 		]);
 	});
 };

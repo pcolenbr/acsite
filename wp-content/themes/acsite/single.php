@@ -22,12 +22,12 @@
 
 						<div id="postAttributes">
 							<div class ="postAttributeItem">
-								<img src="<?php bloginfo('template_directory'); ?>/images/clock.png" >
+								<img src="<?php bloginfo('template_directory'); ?>/images/dev/clock.png" >
 								<span><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></span>
 							</div>	
 
 							<div class ="postAttributeItem">
-								<img src="<?php bloginfo('template_directory'); ?>/images/comments.png" >
+								<img src="<?php bloginfo('template_directory'); ?>/images/dev/comments.png" >
 								<span><?php echo comments_number( )?></span>
 							</div>
 						</div>

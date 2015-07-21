@@ -8,7 +8,7 @@ if($currentlang=="en"):?>
                 <span class="mask"></span>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Management Consulting' ) ) ); ?>"><span class="mask-bg"></span></a>
 
-                <img src="<?php bloginfo('template_directory'); ?>/images/light_house.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dev/light_house.png" alt="">
             </div>
 
             <h3>MANAGEMENT<br>CONSULTING</h3>
@@ -23,7 +23,7 @@ if($currentlang=="en"):?>
                 <span class="num num-orange">2</span>
                 <span class="mask"></span>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Project Ownership and Implementation' ) ) ); ?>"><span class="mask-bg"></span></a>
-                <img src="<?php bloginfo('template_directory'); ?>/images/luggage.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dev/luggage.png" alt="">
             </div>
             <h3>PROJECT OWNERSHIP<br> AND IMPLEMENTATION</h3>
             <p>We help you get there</p>
@@ -37,7 +37,7 @@ if($currentlang=="en"):?>
                 <span class="num num-grey">3</span>
                 <span class="mask"></span>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Engineering and Agile Professionals' ) ) ); ?>"><span class="mask-bg"></span></a>
-                <img src="<?php bloginfo('template_directory'); ?>/images/airplane.jpg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dev/airplane.jpg" alt="">
             </div>
             <h3>ENGINEERING AND<br> AGILE PROFESSIONALS</h3>
             <p>Our people are world class</p>
@@ -51,7 +51,7 @@ if($currentlang=="en"):?>
                 <span class="num num-red">4</span>
                 <span class="mask"></span>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Avenue Code Academy' ) ) ); ?>"><span class="mask-bg"></span></a>
-                <img src="<?php bloginfo('template_directory'); ?>/images/sunglasses.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dev/sunglasses.png" alt="">
             </div>
             <h3>AVENUE CODE<br>ACADEMY<br></h3>
             <p>We give you the right skills</p>
@@ -67,7 +67,7 @@ if($currentlang=="en"):?>
                 <span class="mask"></span>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Gestão e Consultoria' ) ) ); ?>"><span class="mask-bg"></span></a>
 
-                <img src="<?php bloginfo('template_directory'); ?>/images/light_house.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dev/light_house.png" alt="">
             </div>
 
             <h3>GESTÃO<br>E CONSULTORIA</h3>
@@ -82,7 +82,7 @@ if($currentlang=="en"):?>
                 <span class="num num-orange">2</span>
                 <span class="mask"></span>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Gestão e Implementação de Projeto' ) ) ); ?>"><span class="mask-bg"></span></a>
-                <img src="<?php bloginfo('template_directory'); ?>/images/luggage.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dev/luggage.png" alt="">
             </div>
             <h3>GESTÃO E IMPLEMENTAÇÃO<br>DE PROJETO</h3>
             <p>Nós te ajudamos a chegar lá</p>
@@ -96,7 +96,7 @@ if($currentlang=="en"):?>
                 <span class="num num-grey">3</span>
                 <span class="mask"></span>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Profissionais de Engenharia e Metodologia Ágil' ) ) ); ?>"><span class="mask-bg"></span></a>
-                <img src="<?php bloginfo('template_directory'); ?>/images/airplane.jpg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dev/airplane.jpg" alt="">
             </div>
             <h3>PROFISSIONAIS DE<br>ENGENHARIA E AGILE</h3>
             <p>Nossas pessoas são experts</p>

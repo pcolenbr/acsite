@@ -131,7 +131,7 @@
 				</div>
 			</div>
 
-			<img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/leadership_photo.jpg" alt="Amir and Zeo" id="leadership_img">
+			<img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/dev/leadership_photo.jpg" alt="Amir and Zeo" id="leadership_img">
 		</section>
 
 		<section id="team" data-submenu="<?php echo ($currentlang == 'en')? 'team' :  (($currentlang == 'pt')? 'time' : '') ?>">
@@ -210,7 +210,7 @@
 						</div>
 
 						<div class="col-xs-12 col-sm-12 col-md-6">
-							<img src="<?php bloginfo('template_directory'); ?>/images/suitcaseNoBkg.png" class="img-responsive">
+							<img src="<?php bloginfo('template_directory'); ?>/images/dev/suitcaseNoBkg.png" class="img-responsive">
 						</div>
 					</div>
 				<?php } elseif($currentlang=="pt") { ?>
@@ -236,7 +236,7 @@
 						</div>
 
 						<div class="col-xs-12 col-sm-12 col-md-6">
-							<img src="<?php bloginfo('template_directory'); ?>/images/suitcaseNoBkg.png" class="img-responsive">
+							<img src="<?php bloginfo('template_directory'); ?>/images/dev/suitcaseNoBkg.png" class="img-responsive">
 						</div>
 					</div>				
 				<?php } ?>
@@ -247,7 +247,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-6">
-						<img src="<?php bloginfo('template_directory'); ?>/images/in_the_beginning_2.jpg" alt="USA Beginning Photo" id="usaBeginningPhoto" class="img-responsive"/>
+						<img src="<?php bloginfo('template_directory'); ?>/images/dev/in_the_beginning_2.jpg" alt="USA Beginning Photo" id="usaBeginningPhoto" class="img-responsive"/>
 					</div>
 
 					<div class="col-xs-12 col-sm-12 col-md-6">
@@ -275,8 +275,8 @@
 					</div>
 
 					<div id="brPhotosContainer" class = "col-xs-12 col-sm-12 col-md-4">
-						<img src="<?php bloginfo('template_directory'); ?>/images/in_the_beginning_br01.jpg" alt="Brazil's Beginning Photo" class="brBeginningPhoto img-responsive"/>
-						<img src="<?php bloginfo('template_directory'); ?>/images/in_the_beginning_br02.jpg" alt="Brazil's Beginning Photo" class="brBeginningPhoto img-responsive"/>
+						<img src="<?php bloginfo('template_directory'); ?>/images/dev/in_the_beginning_br01.jpg" alt="Brazil's Beginning Photo" class="brBeginningPhoto img-responsive"/>
+						<img src="<?php bloginfo('template_directory'); ?>/images/dev/in_the_beginning_br02.jpg" alt="Brazil's Beginning Photo" class="brBeginningPhoto img-responsive"/>
 					</div>
 				</div>
 			</div>

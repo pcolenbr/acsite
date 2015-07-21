@@ -11,8 +11,8 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a href="<?php echo get_bloginfo('url') ?>" class="navbar-brand nav-logo">
-					<img src="<?php bloginfo('template_directory'); ?>/images/white-logo.png" alt="Logo" id="white-logo" class="hidden-xs">
-					<img src="<?php bloginfo('template_directory'); ?>/images/white-short-logo.png" alt="Logo" id="white-short-logo" class="visible-xs">
+					<img src="<?php bloginfo('template_directory'); ?>/images/dev/white-logo.png" alt="Logo" id="white-logo" class="hidden-xs">
+					<img src="<?php bloginfo('template_directory'); ?>/images/dev/white-short-logo.png" alt="Logo" id="white-short-logo" class="visible-xs">
 				</a>
 
 				<div class="navbar-collapse collapse" id="nav-bar" aria-expanded="false">

@@ -21,7 +21,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-6 want-to-join-box">
 						<div class="want-to-join-img-box">
-							<img class="img-responsive want-to-join-img" src="<?php bloginfo('template_directory'); ?>/images/careers_tech.png">
+							<img class="img-responsive want-to-join-img" src="<?php bloginfo('template_directory'); ?>/images/dev/careers_tech.png">
 						</div>
 						<div class="want-to-join-inner-box">
 							<?php if($currentlang=="en") { ?>
@@ -40,7 +40,7 @@
 
 					<div class="col-xs-12 col-md-6 want-to-join-box">
 						<div class="want-to-join-img-box">
-							<img class="img-responsive want-to-join-img" src="<?php bloginfo('template_directory'); ?>/images/careers_recruiting.png">
+							<img class="img-responsive want-to-join-img" src="<?php bloginfo('template_directory'); ?>/images/dev/careers_recruiting.png">
 						</div>
 						<div class="want-to-join-inner-box">
 							<?php if($currentlang=="en") { ?>
@@ -129,7 +129,7 @@
 								<a href="" class="btn btn-blue" id="btnApply" target="_blank">APPLY NOW</a>
 							</div>
 							<div class="jobShareBtn">
-								<a id="shareFacebook" target="_blank" href="http://www.facebook.com/sharer.php?u=avenuecode.com/acnew/careers"><img src="<?php bloginfo('template_directory'); ?>/images/share_facebook.png"></a>
+								<a id="shareFacebook" target="_blank" href="http://www.facebook.com/sharer.php?u=avenuecode.com/acnew/careers"><img src="<?php bloginfo('template_directory'); ?>/images/dev/share_facebook.png"></a>
 							</div>
 						</div>	
 					</div>
