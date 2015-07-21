@@ -233,6 +233,7 @@ module.exports = function (grunt) {
 			'concat_css',
 			'notify:scss',
 			'clean:dist',
+			'imagemin:theme',
 			'copy:dist',
 			'replace:dist'
 		]);
